@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="Amy老师">
+  <meta name="Keywords" content="菜单,后台功能菜单">
+  <meta name="Description" content="">
+  <title>HTML5实现后台二级菜单管理系统---Amy老师潭州学院</title>
+  <style type="text/css">
+   *{margin:0px; padding:0px;}
+    #Nav{width:210px;background:#282828;margin-left:100px;}
+	#Nav .title{width:210px;height:52px;text-align:center;}
+    #Nav ul{border:0px solid #424242;border-top:1px solid #000;border-bottom:1px solid #424242;}
+	#Nav ul li{color:#fff;width:210px;font-size:14px;font-family:"微软雅黑";
+	border-top:1px solid #424242;border-bottom:1px solid #000;list-style:none;line-height:50px;text-indent:30px;
+	}
+	#Nav ul li .menu{width:210px;height:300px;background:#006600;display:none;}
+  </style>
+ </head>
+ <body>
+ <!--
+1.div盒子，容器，层
+2.-->
+   <div id="Nav">
+      <div class="title"><img src="images/logo.png" align="absmiddle"/></div>
+	  <ul>
+	    <li><img src="images/text_block.png" align="absmiddle"/>核心
+		<div class="menu" style="display:block;"></div>
+		</li>
+		<li><img src="images/pen.png" align="absmiddle"/>模板管理
+		<div class="menu"></div>
+		</li>
+		<li><img src="images/reload.png" align="absmiddle"/>生成
+		<div class="menu"></div>
+		</li>
+		<li><img src="images/setting.png" align="absmiddle"/>栏目文件
+		<div class="menu"></div>
+		</li>
+	  
+	  </ul>
+   </div>
+   <script type="text/javascript" src="js/jquery_1.1.1.js"></script>
+   <script type="text/javascript">
+     $("#Nav ul li").click(function(){//给每个li加点击事件 
+	  $(this).find(".menu").slideToggle("slow");//当前li里面的应用menu样式的层，慢慢展开
+	  $(this).siblings().find(".menu").slideUp();//和当前li是同级元素的里面的层，慢慢收回
+	 
+	 });
+   
+   
+   
+   </script>
+ </body>
+</html>
