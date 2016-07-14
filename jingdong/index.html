@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>纯CSS实现京东导航列表</title>
+<script src="js/jquery-1.11.1.min.js"></script>
+<title>京东导航列表</title>
 <style>
 *{margin:0;padding:0;}
 body{
@@ -157,7 +158,57 @@ leftdiv dl dd{
 	color:#737373;
 	font-weight:normal;
 }
+.slider{
+    width:730px;
+    height: 454px;
+    border:1px solid red;
+    position:absolute;
+    top:50px;
+    left:230px;
+}
+.slider-main li{
+    position:absolute;
+    z-index: 0;
+    opacity:0;
+    list-style:none;
+}
+.slider-extra{
+    position:absolute;
+    top:430px;
+    left:300px;
+    z-index:4;
+}
+.slider-extra ul li{
+    display:inline-block;
+    list-style:none;
+    margin-left:-2px;
+    width:18px;
+    height:18px;
+    line-height:18px;
+    border-radius:9px;
+    background:#3e3e3e;
+    text-align:center;
+    color:white;
+    font-size:12px;
+    font-family:Arial,Verdana,宋体;
+    cursor:pointer;
+}
 </style>
+<script>
+    $(function(){
+        $(".slider-extra ul li").hover(function(){
+            $(this).css({"background":"#b61b1f","transition":"all 0.5s"}).siblings().css({"background":"#3e3e3e","transition":"all 0.5s"});
+            nb=$(this).text();
+            nb-=1;
+            $(".slider-main li").eq(nb).css({"z-index":"1","opacity":"1"});
+            for(var i=0;i<6;i++){
+                if(i!=nb){
+                    $(".slider-main li").eq(i).css({"z-index":"0","opacity":"0"});
+                }
+            }
+        },function(){});
+    });
+</script>
 </head>
 
 <body>
@@ -285,6 +336,41 @@ leftdiv dl dd{
     <li><a href="#">母婴、玩具乐器</a></li>
     <li><a href="#">食品饮料、酒类、生鲜</a></li>
     <li><a href="#">营养保健</a></li>
+    <li><a href="#">图书、音像、电子书</a></li>
+    <li><a href="#">彩票、旅游、充值、票务</a></li>
+    <li><a href="#">理财、众筹、白条、保险</a></li>
 </ul>
+<div class="slider">
+    <ul class="slider-main">
+        <li style="z-index:1;opacity:1;">
+            <a href="#"><img src="img/1.jpg"></a>
+        </li>
+        <li>
+            <a href="#"><img src="img/2.jpg"></a>
+        </li>
+        <li>
+            <a href="#"><img src="img/3.jpg"></a>
+        </li>
+        <li>
+            <a href="#"><img src="img/4.jpg"></a>
+        </li>
+        <li>
+            <a href="#"><img src="img/5.jpg"></a>
+        </li>
+        <li>
+            <a href="#"><img src="img/6.jpg"></a>
+        </li>
+    </ul>
+   <div class="slider-extra">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+    </div>
+</div>
 </body>
 </html>
