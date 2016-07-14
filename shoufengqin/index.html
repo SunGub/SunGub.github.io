@@ -1,13 +1,13 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>无标题文档</title>
+<script src="js/jquery-1.11.1.min.js"></script>
+<title>手风琴</title>
 <style>
    *{margin:0; padding:0}
    body{background:#ccc;}
    #wrap{width:1150px; height:280px; border:6px solid #fff; margin:120px auto; overflow:hidden}
-   #wrap ul{background:#FC3; width:2180px; height:280px;}
+   #wrap ul{background:#FC3;width:2180px; height:280px;}
    #wrap ul li{list-style:none;/*将无序列表前面的小黑点去掉*/ width:192px; float:left; height:280px; cursor:pointer; 
    /*CSS3阴影*/ }
    /*设置每个列表项的颜色*/
@@ -18,8 +18,9 @@
    #wrap ul li:nth-child(5){background:#6C0; box-shadow:0px 0px 25px 10px rgba(0,0,0,0.5);}
    #wrap ul li:nth-child(6){background:#FC3; box-shadow:-10px 0px 25px -4px rgba(0,0,0,0.5);}
    /*设置鼠标经过的时候*/
-   #wrap ul:hover li{width:40px;transition:all 1s;}/*当鼠标移动到 ul 上时所有的 li 的宽度都变小*/
-   #wrap ul li:hover{width:960px; transition:all 1s;}/* 将鼠标移动到 li 标签时 仅将该 li 标签变宽*/
+   /*#wrap ul:hover li{width:40px;transition:all 1s;}/*当鼠标移动到 ul 上时所有的 li 的宽度都变小*/
+   /*#wrap ul li:hover{width:960px; transition:all 1s;}/* 将鼠标移动到 li 标签时 仅将该 li 标签变宽*/
+   
    /*course*/
    .course{width:980px; margin:45px 33px;}
    .course dl{width:210px; height:190px;border:1px solid #fff; box-shadow:0px 0px 5px #ccc; 
@@ -28,8 +29,17 @@
    .course dl dd{ line-height:30px; background:rgba(0,0,0,0.5); font-size:14px; font-weight:bold;}
    .course dl dd span{color:#CCC}
 </style>
+<script>
+$(function(){
+  $("li").hover(function(){
+    $(this).css({"width":"960px","transition":"all 1s"}).siblings().css({"width":"40px","transition":"all 1s"});  
+    },function(){
+      $("li").css({"width":"192px","transition":"all 1s"});
+    }
+  );
+});
+</script>
 </head>
-
 <body>
    <div id="wrap">
        <ul>
@@ -53,8 +63,6 @@
                    </dl>
                </div> 
            </li>
-            
-
             <li>
                <div class="course">
                    <dl>
@@ -95,8 +103,6 @@
                    </dl>
                </div> 
            </li>
-
-
             <li>
                <div class="course">
                    <dl>
@@ -157,8 +163,7 @@
                    </dl>
                </div> 
            </li> 
-              
        </ul>
-   </div>   
+   </div>
 </body>
 </html>
