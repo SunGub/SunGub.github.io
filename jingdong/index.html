@@ -66,24 +66,28 @@ html,body{
     line-height:30px;
 }
 
+.fore0 .dropdown-layer{
+    width:300px;
+    height:224px;
+    position:absolute;
+    top:30px;
+    z-index:5;
+    background: white;
+    padding:10px 0 10px 10px;
+    border:1px solid #ddd;
+}
+.fore0 .dropdown-layer .item{
+    float:left;
+    padding:2px 8px;
+}
 
-/*
-.h-top .lh-top:hover .arrow{
-    /*箭头旋转*
-    transform:rotate(360deg);
-    -webkit-transform:rotate(360deg);
-}
-.h-top .lh-top:hover s{
-    font-size:12px;
-    line-height:30px;
-}
-*/
 
 
 .h-top .rh-top{
     height:14px;
     line-height:14px;
     float:right;
+    margin-right:65px;
 }
 .h-top .rh-top ul li{
     list-style:none;
@@ -357,7 +361,10 @@ leftdiv dl dd{
             nb-=1;
             /*和数字对应的图片显示，其他图片隐藏起来*/
             $(".slider-main li").eq(nb).css({"z-index":"1","opacity":"1","transition":"all 1s"}).siblings().css({"z-index":"0","opacity":"0","transition":"all 1s"});
-        },function(){});
+            clearInterval(time1);
+        },function(){
+            time1=setInterval(function(){myInterval(1);},2000);
+        });
 
         //左右两侧的箭头显示与消失
         /*鼠标移动到图片上时图片不变，离开时又执行setInterval()*/
@@ -416,32 +423,64 @@ leftdiv dl dd{
     <!-- 头部最上面的块 -->
     <div class="h-top">
         <div class="lh-top">
-        <ul>
-            <li class="fore0 dropdown">
-                <span>送至：北京</span>
-                <div class="arrow"><s>◇</s></div></div>
-                <div class="dropdown-layer">
-                    <!-- <div class="">北京</div><div class="">上海</div><div class="">天津</div><div class="">重庆</div>
-                    <div class="">河北</div><div class="">山西</div><div class="">河南</div><div class="">辽宁</div>
-                    <div class="">吉林</div><div class="">黑龙江</div><div class="">内蒙古</div><div class="">江苏</div>
-                    <div class="">山东</div><div class="">安徽</div><div class="">浙江</div><div class="">福建</div>
-                    <div class="">湖北</div><div class="">湖南</div><div class="">广东</div><div class="">广西</div>
-                    <div class="">江西</div><div class="">四川</div><div class="">海南</div><div class="">贵州</div>
-                    <div class="">云南</div><div class="">西藏</div><div class="">陕西</div><div class="">甘肃</div>
-                    <div class="">青海</div><div class="">宁夏</div><div class="">新疆</div><div class="">台湾</div>
-                    <div class="">香港</div><div class="">澳门</div><div class="">钓鱼岛</div><div class="">海外</div> -->
-                </div>
-            </li>
-        <div class="rh-top">
             <ul>
-                <li class="fore1">
-                    <div class="dt">
-                        <a href="#" style="border:none">你好，请登录</a>
+                <li class="fore0 dropdown">
+                    <span>送至：北京</span>
+                    <div class="arrow"><s>◇</s></div>
+                    <div class="dropdown-layer">
+                        <div class="sss1">
+                            <div class="item"><a href="#">北京</a></div>
+                            <div class="item"><a href="#">上海</a></div>
+                            <div class="item"><a href="#">天津</a></div>
+                            <div class="item"><a href="#">重庆</a></div>
+                            <div class="item"><a href="#">河北</a></div>
+                            <div class="item"><a href="#">山西</a></div>
+                            <div class="item"><a href="#">河南</a></div>
+                            <div class="item"><a href="#">辽宁</a></div>
+                            <div class="item"><a href="#">吉林</a></div>
+                            <div class="item"><a href="#">黑龙江</a></div>
+                            <div class="item"><a href="#">内蒙古</a></div>
+                            <div class="item"><a href="#">江苏</a></div>
+                            <div class="item"><a href="#">山东</a></div>
+                            <div class="item"><a href="#">安徽</a></div>
+                            <div class="item"><a href="#">浙江</a></div>
+                            <div class="item"><a href="#">福建</a></div>
+                            <div class="item"><a href="#">湖北</a></div>
+                            <div class="item"><a href="#">湖南</a></div>
+                            <div class="item"><a href="#">广东</a></div>
+                            <div class="item"><a href="#">广西</a></div>
+                            <div class="item"><a href="#">江西</a></div>
+                            <div class="item"><a href="#">四川</a></div>
+                            <div class="item"><a href="#">海南</a></div>
+                            <div class="item"><a href="#">贵州</a></div>
+                            <div class="item"><a href="#">云南</a></div>
+                            <div class="item"><a href="#">西藏</a></div>
+                            <div class="item"><a href="#">陕西</a></div>
+                            <div class="item"><a href="#">甘肃</a></div>
+                            <div class="item"><a href="#">青海</a></div>
+                            <div class="item"><a href="#">宁夏</a></div>
+                            <div class="item"><a href="#">新疆</a></div>
+                            <div class="item"><a href="#">台湾</a></div>
+                            <div class="item"><a href="#">香港</a></div>
+                            <div class="item"><a href="#">澳门</a></div>
+                            <div class="item"><a href="#">钓鱼岛</a></div>
+                            <div class="item"><a href="#">海外</a></div>
+                        </div>
+                        
                     </div>
                 </li>
-                <li class="fore2">
+            </ul>
+        </div>
+        <div class="rh-top">
+            <ul>
+                <li class="fore1" style="border:none">
                     <div class="dt">
-                        <a href="#" style="color:#c81623;border:none;padding-left:0">免费注册</a>
+                        <a href="#">你好，请登录</a>
+                    </div>
+                </li>
+                <li class="fore2" style="border:none">
+                    <div class="dt" style="padding-left:0">
+                        <a href="#" style="color:#c81623">免费注册</a>
                     </div>
                 </li>
                  <li class="fore3">
