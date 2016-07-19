@@ -75,6 +75,7 @@ html,body{
     display:inline-block;
     margin-right:2px;
 }
+/*左侧悬浮层*/
 .fore0 .dropdown-layer{
     display:none;
     width:300px;
@@ -111,7 +112,7 @@ html,body{
 .fore0 .dropdown-layer .item  .a-select:hover{
     color:#fff;
 }
-.dropdown-layer .dd-spacer{
+.fore0 .dropdown-layer .dd-spacer{
     width:84px;
     height:10px;
     background:#fff;
@@ -119,10 +120,7 @@ html,body{
     top:-6px;
     left:0px;
 }
-
-
-
-
+/*头部右边设置*/
 .h-top .rh-top{
     height:14px;
     line-height:14px;
@@ -146,17 +144,194 @@ html,body{
     color:#666666;
     text-decoration:none;
 }
-.h-top .rh-top ul li .icon{
-    padding-right: 25px;
-}
-.h-top .rh-top a:hover{
+.h-top .rh-top ul li .dt a:hover{
     color:#c81623;
 
 }
-
-.dropdown-layer{
-
+/*我的京东悬浮层*/
+.h-top .rh-top ul li.dropdown .dropdown-layer{
+    position:absolute;
+    top:30px;
+    background: #fff;
+    z-index:10;
+    border:1px solid #e4e4e4;
 }
+.fore4.dropdown .dropdown-layer{
+    display:none;
+    width:280px;
+}
+
+/*.fore4.dropdown:hover .dropdown-layer{
+    display:block;
+}*/
+
+
+
+
+
+.fore4 .dropdown-layer .userinfo a:hover{
+    color:#c81623;
+}
+.fore4 .dropdown-layer .userinfo{
+    padding:10px 0 10px 15px;
+}
+.fore4 .dropdown-layer .userinfo img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    float:left;
+}
+.fore4 .dropdown-layer .userinfo dl{
+    margin:8px 0 0 70px;
+    line-height:24px;
+}
+.fore4 .dropdown-layer .userinfo a,.fore4 .dropdown-layer .otherlist a{
+    text-decoration:none;
+    color:#666;
+}
+.fore4 .dropdown-layer .userinfo dl dt a{
+    font-weight:bold;
+    /*font-family: PingFangSC-Light, "helvetica neue", "hiragino sans gb", tahoma, "microsoft yahei ui", "microsoft yahei", simsun, sans-serif;*/
+}
+.fore4 .dropdown-layer .otherlist{
+    padding:10px 0 10px 15px;
+}
+.fore4 .dropdown-layer .otherlist .item{
+    width:80px;
+    float:left;
+    line-height:24px;
+    margin-right:44px;
+}
+
+.fore7 .dropdown-layer{
+    display:none;
+}
+.fore7 .dropdown-layer a{
+    display:block;
+    position:absolute;
+    background:#fff;
+    opacity:0;
+}
+
+.fore7 .dropdown-layer a.a{
+    width:86px;
+    height:20px;
+    top:8px;
+    left:94px;
+}
+.fore7 .dropdown-layer a.a1{
+    width:48px;
+    height:44px;
+    top:44px;
+}
+.fore7 .dropdown-layer a.b{
+    left:94px;
+}
+.fore7 .dropdown-layer a.c{
+    left:152px;
+}
+.fore7 .dropdown-layer a.d{
+    left:210px;
+    width:40px;
+}
+.fore7 .dropdown-layer a.e{
+    width:94px;
+    height:28px;
+    top:100px;
+    left:94px;
+}
+.fore7 .dropdown-layer a.f{
+    width:48px;
+    height:44px;
+    top:142px;
+    left:94px;
+}
+.fore7 .dropdown-layer a.g{
+    width:48px;
+    height:44px;
+    top:142px;
+    left:152px;
+}
+.fore8 .dropdown-layer{
+    display:none;
+}
+.fore9 .dropdown-layer{
+    display:none;
+    width:170px;
+    padding-left:10px;
+}
+.fore9 .dropdown-layer .client{
+    padding:5px 0;
+    border-bottom:1px dashed #e4e4e4;
+}
+.fore9 .dropdown-layer .business{
+    padding:5px 0;
+}
+.fore9 .dropdown-layer dl{
+    overflow:hidden;
+    line-height:24px;
+}
+
+.fore9 .dropdown-layer dl dt{
+    font-weight:bold;
+}
+.fore9 .dropdown-layer dl dd{
+    width:70px;
+    float:left;
+    margin-right:14px;
+} 
+
+.fore9 .dropdown-layer dl a{
+    text-decoration:none;
+    color:#666;
+}
+.fore9 .dropdown-layer dl dd a:hover{
+    color:#c81623;
+}
+.fore10 .dropdown-layer1{
+    display:none;
+    width:1210px;
+    margin:0 auto;
+    padding:20px 0 16px;
+    position:absolute;
+    top:30px;
+    left:70px;
+    background: #fff;
+    z-index:10;
+    border:1px solid #e4e4e4;
+}
+.fore10 .dropdown-layer1 .netnav1,.netnav2,.netnav3,.netnav4{
+    width:259px;
+    /*overflow:hidden;*/
+    float:left;
+    line-height:24px;
+    border-right:1px solid #e4e4e4;
+    padding-left:20px;
+}
+.fore10 .dropdown-layer1 .netnav1{
+    width:347px;
+}
+.fore10 .dropdown-layer1 dl dt{
+    font-size:14px;
+    font-weight:bold;
+    color:#666;  
+    margin-bottom:6px;
+}
+.fore10 .dropdown-layer1 dl dd{
+    width:74px;
+    float:left;
+    margin-right:12px;
+}
+.fore10 .dropdown-layer1 dl dd a{
+    text-decoration:none;
+    color:#666;
+}
+.fore10 .dropdown-layer1 dl dd a:hover{
+    color:#c81623;
+}
+
 .head .h-main{
     width:100%;
     height:100px;
@@ -387,7 +562,7 @@ leftdiv dl dd{
     position:absolute;
     bottom:0px;
     left:1048px;
-    z-index:10;
+    z-index:8;
 }
 </style>
 <script>
@@ -435,12 +610,76 @@ leftdiv dl dd{
         $(".h-top .lh-top .dropdown").hover(function(){
             $(this).addClass("hoverarrow");
             $(this).css({"border":"1px solid #ddd","background":"#fff"});
-            $(".dropdown-layer").css("display","block");
+            $(".h-top .lh-top .dropdown .dropdown-layer").css("display","block");
         },function(){
             $(this).removeClass("hoverarrow");
             $(this).css({"border":"none","background":"#F1F1F1"});
-            $(".dropdown-layer").css("display","none");
+            $(".h-top .lh-top .dropdown .dropdown-layer").css("display","none");
         });
+
+
+
+        // 我的京东
+        $(".fore4,.fore4 .dropdown-layer").hover(function(){
+            $(this).addClass("hoverarrow");
+            $(this).css({"background":"#fff"});
+            $(".fore4 .dropdown-layer").css("display","block");
+        },function(){
+            $(this).removeClass("hoverarrow");
+            $(this).css({"background":"#F1F1F1"});
+            $(".fore4 .dropdown-layer").css("display","none");
+        });
+
+
+
+
+        // 手机京东
+        $(".fore7").hover(function(){
+            $(this).addClass("hoverarrow");
+            $(this).css({"background":"#fff"});
+            $(".fore7 .dropdown-layer").css("display","block");
+        },function(){
+            $(this).removeClass("hoverarrow");
+            $(this).css({"background":"#F1F1F1"});
+            $(".fore7 .dropdown-layer").css("display","none");
+        });
+
+        // 关注京东
+        $(".fore8").hover(function(){
+            $(this).addClass("hoverarrow");
+            $(this).css({"background":"#fff"});
+            $(".fore8 .dropdown-layer").css("display","block");
+        },function(){
+            $(this).removeClass("hoverarrow");
+            $(this).css({"background":"#F1F1F1"});
+            $(".fore8 .dropdown-layer").css("display","none");
+        });
+
+        // 客户服务
+        $(".fore9").hover(function(){
+            $(this).addClass("hoverarrow");
+            $(this).css({"background":"#fff"});
+            $(".fore9 .dropdown-layer").css("display","block");
+        },function(){
+            $(this).removeClass("hoverarrow");
+            $(this).css({"background":"#F1F1F1"});
+            $(".fore9 .dropdown-layer").css("display","none");
+        });
+
+        // 网站导航
+        $(".fore10").hover(function(){
+            $(this).addClass("hoverarrow");
+            $(this).css({"background":"#fff"});
+            $(".fore10 .dropdown-layer1").css("display","block");
+        },function(){
+            $(this).removeClass("hoverarrow");
+            $(this).css({"background":"#F1F1F1"});
+            $(".fore10 .dropdown-layer1").css("display","none");
+        });
+
+
+
+
 
         /*通过地址块 的 点击事件来切换地址*/
         $(".fore0 .dropdown-layer .item a").click(function(){
@@ -482,10 +721,8 @@ leftdiv dl dd{
             <ul>
                 <li class="fore0 dropdown">
                     <div class="dt">
-                        
                         <span>送至：北京</span>
-                         <div class="arrow"><s>◇</s></div>
-                       
+                        <div class="arrow"><s>◇</s></div>
                     </div>
                     <div class="dd dropdown-layer">
                         <div class="dd-spacer"></div>
@@ -527,7 +764,6 @@ leftdiv dl dd{
                             <div class="item"><a href="#">钓鱼岛</a></div>
                             <div class="item"><a href="#">海外</a></div>
                         </div>
-                        
                     </div>
                 </li>
             </ul>
@@ -554,7 +790,28 @@ leftdiv dl dd{
                         <a href="#">我的京东</a>
                         <div class="arrow"><s>◇</s></div>
                     </div>
-                    <div class="dropdown-layer"></div>
+                    <div class="dropdown-layer">
+                        <div class="dd-spacer"></div>
+                        <div class="userinfo">
+                            <img src="img/myjd.jpg" />
+                            <dl>
+                                <dt><a href="#">你好，请登录</a></dt>
+                                <dd><a href="#">优惠券</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                                    <a href="#">消息</a>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="otherlist">
+                            <div class="item"><a href="#">待处理订单</a></div>
+                            <div class="item"><a href="#">我的关注</a></div>
+                            <div class="item"><a href="#">咨询回复</a></div>
+                            <div class="item"><a href="#">我的京豆</a></div>
+                            <div class="item"><a href="#">降价商品</a></div>
+                            <div class="item"><a href="#">我的理财</a></div>
+                            <div class="item"><a href="#">返修退换货</a></div>
+                            <div class="item"><a href="#">京东白条</a></div>
+                        </div>
+                    </div>
                 </li>
                 <li class="fore5">
                     <div class="dt">
@@ -571,28 +828,149 @@ leftdiv dl dd{
                         <a href="#">手机京东</a>
                         <div class="arrow"><s>◇</s></div>
                     </div>
-                    <div class="dropdown-layer"></div>
+                    <div class="dropdown-layer">
+                        <div class="dd-spacer"></div>
+                        <div class="a">
+                            <img src="img/phonejd.png">
+                            <a class="a" href="http://app.jd.com/" target="_blank">京东客户端</a>
+                            <a class="b a1" href="http://itunes.apple.com/cn/app/id414245413" target="_blank">京东客户端ios版</a>
+                            <a class="c a1" href="http://storage.jd.com/jdmobile/JDMALL-PC2.apk" target="_blank">京东客户端android版</a>
+                            <a class="d a1" href="https://itunes.apple.com/cn/app/jing-dong-hd/id434374726" target="_blank">京东客户端ipad版</a>
+                            <a class="e" href="http://dc2.jd.com/?rXkGQQ" target="_blank">京东钱包客户端</a>
+                            <a class="f" href="https://itunes.apple.com/cn/app/wang-yin-qian-bao/id832444218?mt=8" target="_blank">京东钱包客户端ios版</a>
+                            <a class="g" href="http://sq.jd.com/vFIRtq" target="_blank">京东钱包客户端android版</a>
+
+                        </div>   
+                      
+                    </div>
                 </li>
                 <li class="fore8 dropdown">
                     <div class="dt icon">
                         <a href="#">关注京东</a>
                         <div class="arrow"><s>◇</s></div>
                     </div>
-                    <div class="dropdown-layer"></div>
+                    <div class="dropdown-layer">
+                        <div class="dd-spacer"></div>
+                        <img src="img/focusjd.jpg">
+                    </div>
                 </li>
                 <li class="fore9 dropdown">
                     <div class="dt icon">
                         <a href="#">客户服务</a>
                         <div class="arrow"><s>◇</s></div>
                     </div>
-                    <div class="dropdown-layer"></div>
+                    <div class="dropdown-layer">
+                        <div class="dd-spacer"></div>
+                        <div class="client">
+                            <dl>
+                                <dt><a>客户</a></dt>
+                                <dd><a href="#">帮助中心</a></dd>
+                                <dd><a href="#">售后服务</a></dd>
+                                <dd><a href="#">在线客服</a></dd>
+                                <dd><a href="#">意见建议</a></dd>
+                                <dd><a href="#">电话客服</a></dd>
+                                <dd><a href="#">客服邮箱</a></dd>
+                            </dl>
+                        </div>
+                        <div class="business">
+                            <dl>
+                                <dt><a>商户</a></dt>
+                                <dd><a href="#">京东商学院</a></dd>
+                                <dd><a href="#">商家入驻</a></dd>
+                            </dl>
+                        </div>
+                    </div>
                 </li>
                 <li class="fore10 dropdown">
                     <div class="dt icon">
                         <a href="#">网站导航</a>
                         <div class="arrow"><s>◇</s></div>
                     </div>
-                    <div class="dropdown-layer"></div>
+                    <div class="dropdown-layer1">
+                        <div class="netnav1">
+                            <dl>
+                                <dt>特色主题</dt>
+                                <dd><a href="#">品牌街</a></dd>
+                                <dd><a href="#">好物100</a></dd>
+                                <dd><a href="#">京东预售</a></dd>
+                                <dd><a href="#">尖er货</a></dd>
+                                <dd><a href="#">京东首发</a></dd>
+                                <dd><a href="#">今日团购</a></dd>
+                                <dd><a href="#">优惠券</a></dd>
+                                <dd><a href="#">闪购</a></dd>
+                                <dd><a href="#">京东会员</a></dd>
+                                <dd><a href="#">秒杀</a></dd>
+                                <dd><a href="#">定期送</a></dd>
+                                <dd><a href="#">装机大师</a></dd>
+                                <dd><a href="#">新奇特</a></dd>
+                                <dd><a href="#">京东试用</a></dd>
+                                <dd><a href="#">礼品购</a></dd>
+                                <dd><a href="#">智能馆</a></dd>
+                                <dd><a href="#">玩bigger</a></dd>
+                                <dd><a href="#">大牌免息</a></dd>
+                                <dd><a href="#">北京老字号</a></dd>
+                            </dl>
+                        </div>
+                        <div class="netnav2">
+                            <dl>
+                                <dt>行业频道</dd>
+                                <dd><a href="#">服装城</a></dd>
+                                <dd><a href="#">家用电器</a></dd>
+                                <dd><a href="#">电脑办公</a></dd>
+                                <dd><a href="#">手机</a></dd>
+                                <dd><a href="#">美妆馆</a></dd>
+                                <dd><a href="#">食品</a></dd>
+                                <dd><a href="#">数码</a></dd>
+                                <dd><a href="#">母婴</a></dd>
+                                <dd><a href="#">家装城</a></dd>
+                                <dd><a href="#">运动户外</a></dd>
+                                <dd><a href="#">整车</a></dd>
+                                <dd><a href="#">图书</a></dd>
+                                <dd><a href="#">农资频道</a></dd>
+                                <dd><a href="#">京东智能</a></dd>
+                            </dl>
+                        </div>
+                        <div class="netnav3">
+                            <dl>
+                                <dt>生活服务</dt>
+                                <dd><a href="#">京东众筹</a></dd>
+                                <dd><a href="#">白条</a></dd>
+                                <dd><a href="#">京东钱包</a></dd>
+                                <dd><a href="#">京东小金库</a></dd>
+                                <dd><a href="#">理财</a></dd>
+                                <dd><a href="#">话费</a></dd>
+                                <dd><a href="#">旅行</a></dd>
+                                <dd><a href="#">彩票</a></dd>
+                                <dd><a href="#">游戏</a></dd>
+                                <dd><a href="#">机票酒店</a></dd>
+                                <dd><a href="#">电影票</a></dd>
+                                <dd><a href="#">水电煤</a></dd>
+                                <dd><a href="#">京东到家</a></dd>
+                                <dd><a href="#">京东微联</a></dd>
+                                <dd><a href="#">京东众测</a></dd>
+                            </dl>
+                        </div>
+                        <div class="netnav4" style="border-right:none;">
+                            <dl>
+                                <dt>更多精选</dt>
+                                <dd><a href="#">京东社区</a></dd>
+                                <dd><a href="#">京东通信</a></dd>
+                                <dd><a href="#">在线读书</a></dd>
+                                <dd><a href="#">京东E卡</a></dd>
+                                <dd><a href="#">智能社区</a></dd>
+                                <dd><a href="#">游戏社区</a></dd>
+                                <dd><a href="#">京友邦</a></dd>
+                                <dd><a href="#">卖家入驻</a></dd>
+                                <dd><a href="#">企业采购</a></dd>
+                                <dd><dd><a href="#">服务市场</a></dd>
+                                <dd><a href="#">乡村招募</a></dd>
+                                <dd><a href="#">校园加盟</a></dd>
+                                <dd><a href="#">办公生活馆</a></dd>
+                                <dd><a href="#">知识产权维权</a></dd>
+                                <dd><a href="#">English Site</a></dd>
+                            </dl>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </div>
