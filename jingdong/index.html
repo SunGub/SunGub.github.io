@@ -218,7 +218,9 @@ html,body{
     line-height:24px;
     margin-right:44px;
 }
-
+.fore4 .dropdown-layer .otherlist a:hover{
+    color:#c81623;
+}
 .fore7 .dropdown-layer{
     display:none;
 }
@@ -346,11 +348,79 @@ html,body{
     color:#c81623;
 }
 
+
 .head .h-main{
     width:100%;
     height:100px;
     background:#d2dfe0;
 }
+.h-main .logo{
+    width:360px;
+    background:#b89997;
+    padding:20px 0;
+    margin-left:70px;
+    float:left;
+}
+.h-main .search{
+    width:538px;
+    float:left;
+    background: #ddd;
+    margin-top:25px;
+}
+.h-main .search .search1{
+    width:538px;
+    height:36px;
+    margin-bottom:4px;
+}
+.h-main .search .search1 input{
+    width:446px;
+    line-height:24px;
+    padding:4px;
+    float:left;
+    border:2px solid #B61D1D;;
+    border-right:none;
+    outline:none;/*取消input的聚焦边框*/
+}
+.h-main .search .search1 button{
+    float:left;
+    width:82px;
+    height:36px;
+    background:#B61D1D;
+    padding:1px 6px;
+    border:none;
+}
+.h-main .search .search1 button a{
+    text-decoration:none;
+    color:#fff;
+    font-size:16px;
+    font-family:微软雅黑;
+}
+.h-main .search .hotwords ul li{
+    list-style:none;
+    float:left;
+    margin-right:10px;
+}
+.h-main .search .hotwords ul li a{
+    text-decoration: none;
+    color:#666;
+}
+.h-main .search .hotwords ul li a:hover{
+    color:#B61D1D;
+}
+.h-main .purchase{
+    float:left;
+    width:141px;
+    height:36px;
+    background:red;
+    margin-top:25px;
+    margin-left:106px;
+}
+.h-main .hotwords{
+
+}
+
+
+
 .head .h-foot{
     width:100%;
     height:44px;
@@ -999,7 +1069,30 @@ leftdiv dl dd{
         </div>
     </div>
     <!-- 头部中间块 -->
-    <div class="h-main"></div>
+    <div class="h-main">
+        <div class="logo">
+            <a href="#"><img src="img/jdlogo.png" /></a>
+        </div>
+        <div class="search">
+            <div class="search1">
+                <input type="text">
+                <button><a href="#">搜索</a></button>
+            </div>
+            <div class="hotwords">
+                <ul>
+                    <li><a href="#" style="color:#B61D1D;">买二赠一</a></li>
+                    <li><a href="#">立减3000</a></li>
+                    <li><a href="#">买3免1</a></li>
+                    <li><a href="#">360N4S首发</a></li>
+                    <li><a href="#">1元抢手机</a></li>
+                    <li><a href="#">电烤箱</a></li>
+                    <li><a href="#">洗碗液</a></li>
+                    <li><a href="#">0元试用</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="purchase"></div>
+    </div>
     <!-- 头部最下面的块 -->
     <div class="h-foot"></div>
 </div>
