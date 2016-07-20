@@ -69,7 +69,7 @@ html,body{
 }
 .fore0.dropdown .dt{
     /*width:82px;*/
-    padding:0 2px 0 5px;
+    padding:0 2px 0 3px;
 }
 .fore0.dropdown .dt span{
     display:inline-block;
@@ -112,26 +112,40 @@ html,body{
 .fore0 .dropdown-layer .item  .a-select:hover{
     color:#fff;
 }
-.fore0 .dropdown-layer .dd-spacer{
-    width:84px;
+/*遮挡边框的块*/
+.dd-spacer{
+    width:82px;
     height:10px;
     background:#fff;
     position:absolute;
     top:-6px;
-    left:0px;
 }
+.dropdown-layer .dd-spacer{
+    left:0;
+}
+.dropdown-layer1 .dd-spacer{
+    right:0;
+}
+
+
 /*头部右边设置*/
 .h-top .rh-top{
-    height:14px;
-    line-height:14px;
+    height:30px;
+    line-height:30px;
     float:right;
-    margin-right:65px;
+    margin-right:68px;
 }
 .h-top .rh-top ul li{
     list-style:none;
     float:left;
-    border-left:1px solid #dddddd;
-    margin:8px 0;
+    /*border-left:1px solid #dddddd;*/
+    /*margin:8px 0;*/
+}
+.h-top .rh-top ul li.spacer{
+    width:1px;
+    height:12px;
+    background:#ddd;
+    margin-top:9px;
 }
 .h-top .rh-top ul li .dt{
     padding:0 10px;
@@ -156,7 +170,7 @@ html,body{
     z-index:10;
     border:1px solid #e4e4e4;
 }
-.fore4.dropdown .dropdown-layer{
+.fore4 .dropdown-layer{
     display:none;
     width:280px;
 }
@@ -780,11 +794,13 @@ leftdiv dl dd{
                         <a href="#" style="color:#c81623">免费注册</a>
                     </div>
                 </li>
+                <li class="spacer"></li>
                  <li class="fore3">
                     <div class="dt">
                         <a href="#">我的订单</a>
                     </div>
                 </li>
+                <li class="spacer"></li>
                 <li class="fore4 dropdown">
                     <div class="dt icon">
                         <a href="#">我的京东</a>
@@ -813,16 +829,19 @@ leftdiv dl dd{
                         </div>
                     </div>
                 </li>
+                <li class="spacer"></li>
                 <li class="fore5">
                     <div class="dt">
                         <a href="#">京东会员</a>
                     </div>
                 </li>
+                <li class="spacer"></li>
                 <li class="fore6">
                     <div class="dt">
                         <a href="#">企业采购</a>
                     </div>
                 </li>
+                <li class="spacer"></li>
                 <li class="fore7 dropdown">
                     <div class="dt icon">
                         <a href="#">手机京东</a>
@@ -844,6 +863,7 @@ leftdiv dl dd{
                       
                     </div>
                 </li>
+                <li class="spacer"></li>
                 <li class="fore8 dropdown">
                     <div class="dt icon">
                         <a href="#">关注京东</a>
@@ -854,6 +874,7 @@ leftdiv dl dd{
                         <img src="img/focusjd.jpg">
                     </div>
                 </li>
+                <li class="spacer"></li>
                 <li class="fore9 dropdown">
                     <div class="dt icon">
                         <a href="#">客户服务</a>
@@ -881,12 +902,14 @@ leftdiv dl dd{
                         </div>
                     </div>
                 </li>
+                <li class="spacer"></li>
                 <li class="fore10 dropdown">
                     <div class="dt icon">
                         <a href="#">网站导航</a>
                         <div class="arrow"><s>◇</s></div>
                     </div>
                     <div class="dropdown-layer1">
+                        <div class="dd-spacer"></div>
                         <div class="netnav1">
                             <dl>
                                 <dt>特色主题</dt>
