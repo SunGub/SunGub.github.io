@@ -125,8 +125,6 @@
 .h-top .rh-top ul li{
     list-style:none;
     float:left;
-    /*border-left:1px solid #dddddd;*/
-    /*margin:8px 0;*/
 }
 .h-top .rh-top ul li.spacer{
     width:1px;
@@ -161,15 +159,6 @@
     display:none;
     width:280px;
 }
-
-/*.fore4.dropdown:hover .dropdown-layer{
-    display:block;
-}*/
-
-
-
-
-
 .fore4 .dropdown-layer .userinfo a:hover{
     color:#c81623;
 }
@@ -486,9 +475,6 @@
     -webkit-box-shadow:0 0 8px #ddd;
     -moz-box-shadow:0 0 8px #ddd;
 }
-
-
-
 
  .h-foot{
     width:100%;

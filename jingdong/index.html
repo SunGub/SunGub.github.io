@@ -3,6 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script src="js/jquery-1.11.1.min.js"></script>
 <link rel="stylesheet" href="css/top.css">
+<link rel="stylesheet" href="css/sidebar.css">
 <title>京东导航列表</title>
 <style>
 *{margin:0;padding:0;}
@@ -26,62 +27,69 @@ html,body{
 
 /*左侧列表栏*/
 .topmenu{
-	width:220px;
+	width:210px;
 	border:2px solid #E4393C;
 }
 .toptitle{
 	height:40px;
 	line-height:40px;
 	padding-left:20px;
-	/*text-indent:20px;*/
 	font-size:11pt;
 	font-weight:bold;
 	color:white;
-	background:#E4393c;
+	background:#B1191A;
 }
 .topmenu li{
     list-style:none;
 	height:31px;
 	line-height:31px;
+    font-family:"微软雅黑";
 	text-align:left;
 	padding-left:8px;
-	background-image:url("img/arrow.jpg");
-	background-repeat:no-repeat;
-	background-position:right;
+    background-color:#c81623;
 	z-index:3;
  }
+.topmenu li i{
+    position:relative;
+    left:42px;
+    height: 14px;
+    font-style:normal;
+    font-size:9px;
+    line-height: 14px;
+    font-weight:bold;
+    font-family: "consolas";
+    color:white;
+}
 .topmenu li a{
-	color:#3F3F3F;
+	color:#fff;
 	font-size:14px;
 	text-decoration:none;
 }
-.topmenu li a:hover{
-	text-decoration:underline;
+.topmenu li:hover{
+    background:#f7f7f7;
+}
+.topmenu li:hover a{
+	text-decoration:none;
 	font-weight:bold;
 	color:#E4393C;
 }
-.topmenu li:hover{
-	border:1px solid #DDD;
-	border-right:none;
-	box-shadow:0 0 8px #DDD;
-	-moz-box-shadow:0 0 8px #DDD;
-	-webkit-box-shadow:0 0 8px #DDD;
-	background-image:none;
-}
+
+
+
+
 /*.submenu为悬浮层，二级菜单*/
 .submenu{
-	display:none;
-	width:715px;
-	border:1px solid #DDD;
+	/*display:none;*/
+	width:998px;
+    height:444px;
+    border-right:1px solid #b61d1d;
+    border-bottom:1px solid #b61d1d;
+    background:#f7f7f7;
 	position:absolute;
 	top:46px;
-	left:292px;
+	left:284px;
 	z-index:4;
 	padding-top:20px;
-	background:white;
-	box-shadow:0 0 8px #DDD;
-	-moz-box-shadow:0 0 8px #DDD;
-	-webkit-box-shadow:0 0 8px #DDD;
 }
 .submenu .leftdiv{
 	width:490px;
@@ -99,12 +107,12 @@ html,body{
 }
 .topmenu li:hover span{
 	width:20px;
-	height:30px;
-	background:white;
+	height:31px;
+	background:#f7f7f7;
 	display:inline-block;
 	float:right;
 	position:relative;
-	right:-10px;
+	right:-4px;
 	z-index:5;
 }
 
@@ -115,7 +123,7 @@ html,body{
 	padding-bottom:6px;
 	overflow:hidden;
 }
-.leftdiv .fore7 dt{
+ .leftdiv .f7 dt{
 	height:36px;
 }
 .leftdiv dl dt{
@@ -128,12 +136,12 @@ html,body{
 	padding-right:6px;
 }
 .leftdiv dl dt a{
-	color:#E4393C;
+	color:#666;
 	font-size:10pt;
 	font-weight:bold;
 	text-decoration:underline;
 }
-leftdiv dl dd{
+.leftdiv dl dd{
 	display:block;
 	overflow:hidden;
 	
@@ -179,8 +187,8 @@ leftdiv dl dd{
     width:730px;
     height: 454px;
     position:absolute;
-    bottom:0px;
-    left:310px;
+    bottom:2px;
+    left:294px;
 }
 .slider-main li{
     position:absolute;
@@ -192,7 +200,7 @@ leftdiv dl dd{
     position:absolute;
     top:430px;
     left:300px;
-    z-index:4;
+    z-index:3;
 }
 .slider-extra ul li{
     display:inline-block;
@@ -229,70 +237,21 @@ leftdiv dl dd{
 
 /*右侧信息栏*/
 .w{
-    width:240px;
+    width:246px;
     height:453px;
     border: 1px solid #e4e4e4;
     position:absolute;
     bottom:0px;
-    left:1048px;
-    z-index:8;
+    left:1034px;
+    z-index:3;
 }
-.sidebar{
-    width:6px;
-    height:100%;
-    background:#7a6e6e;
-    position:fixed;
-    right:0;
-    top:0;
-    z-index:8;
-    transition:background .3s ease-in-out 0s;
-}
-.toolbar{
-    /*width:6px;*/
-    height:100%;
-    background:#b8bddd;
-    position:fixed;
-    right:6px;
-    top:153px;
-    cursor:pointer;
-    z-index:8;
-}
-.toolbar1 .t-icon{
-    width:38px;
-    height:35px;
-    background-color:#7a6e6e;
-    background-image:url("img/toolbars.png");
-    background-repeat:no-repeat;
-    background-position:-87px -175px;
-    border-radius:3px 0 0 3px;
-    position: relative;
-    right:-6px;
-    z-index:2;
 
-} 
-.toolbar1 .t-layer{
-    width:67px;
-    height:35px;
-    background:#7a6e6e;
-    position:absolute;
-    left:38px;
-    top:0;
-    border-radius:3px 0 0 3px;
-    transition:left .3s ease-in-out .1s;
-    -webkit-transition:left .3s ease-in-out .1s;
-    -moz-transition:left .3s ease-in-out .1s;
-    /*display:none;*/
-}
-.toolbar1 .t-icon:hover{
-    background-color:#c81623;
-}
-.toolbar1:hover .t-icon{
-    background-color:#c81623;
-}
-.toolbar1:hover .t-layer{
-    background-color:#c81623;
-    left:-60px;
-}
+
+
+
+
+
+
 
 </style>
 <script>
@@ -781,6 +740,7 @@ leftdiv dl dd{
             <div class="toptitle">全部商品分类</div>
             <li>
                 <a href="#">图书、音箱、数字商品</a>
+                <i>></i>
                 <span></span>
                 <div class="submenu">
                     <div class="leftdiv">
@@ -825,7 +785,7 @@ leftdiv dl dd{
                                     <a href="#">经济</a> <a href="#">金融与投资</a> <a href="#">管理</a> <a href="#">励志与成功</a>
                                 </dd>
                             </dl>
-                            <dl class="fore7">
+                            <dl class="f7">
                                 <dt><a href="#">生活</a></dt>
                                 <dd>
                                     <a href="#">家教与育儿</a> <a href="#">旅游/地图</a> <a href="#">烹饪/美食</a> <a href="#">时尚/美妆</a>
@@ -950,6 +910,38 @@ leftdiv dl dd{
     <div class="toolbar1">
         <div class="t-icon"></div>
         <div class="t-layer">京东会员</div>
+    </div>
+    <div class="toolbar2">
+        <div class="t-icon"></div>
+        <div class="t-layer">购物车</div>
+    </div>
+    <div class="toolbar3">
+        <div class="t-icon"></div>
+        <div class="t-layer">我的关注</div>
+    </div>
+    <div class="toolbar4">
+        <div class="t-icon"></div>
+        <div class="t-layer">我的足迹</div>
+    </div>
+    <div class="toolbar5">
+        <div class="t-icon"></div>
+        <div class="t-layer">我的消息</div>
+    </div>
+    <div class="toolbar6">
+        <div class="t-icon"></div>
+        <div class="t-layer">咨询JIMI</div>
+    </div>
+    <div style="width: 35px;height:70px;"></div>
+    <div class="toolbar7">
+        <div class="t-icon"></div>
+        <div class="t-layer">顶部</div>
+    </div>
+    <div class="toolbar8">
+        <div class="t-icon"></div>
+        <div class="t-layer">反馈</div>
+    </div>
+    <div class="toolbar9">
+        <div class="t-icon">有奖调查</div>  
     </div>
 </div>
 </body>
