@@ -476,6 +476,7 @@
  .h-foot{
     width:1210px;
     height:44px;
+    padding-right:1000px;
     border-bottom:2px solid #B1191A;
     position:relative;
     z-index:6;
