@@ -27,7 +27,7 @@
     background-repeat:no-repeat;
     border-radius:3px 0 0 3px;
     position: relative;
-    right:-6px;
+    right:-8px;
     z-index:2;
 } 
 .toolbar .t-layer{
@@ -51,7 +51,7 @@
 }
 .toolbar1:hover .t-layer,.toolbar2:hover .t-layer,.toolbar3:hover .t-layer,.toolbar4:hover .t-layer,.toolbar5:hover .t-layer,.toolbar6:hover .t-layer,.toolbar7:hover .t-layer,.toolbar8:hover .t-layer{
     background-color:#c81623;
-    left:-60px;
+    left:-50px;
 }
 .toolbar1 .t-icon{
     background-position:-87px -175px;

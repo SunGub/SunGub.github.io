@@ -10,8 +10,7 @@
     height:30px;
     line-height:30px;
     color:#666666;
-    position: absolute;
-    left:70px;
+    float:left;
 }
 .h-top .lh-top ul li{
     list-style: none;
@@ -120,11 +119,11 @@
     height:30px;
     line-height:30px;
     float:right;
-    margin-right:68px;
 }
 .h-top .rh-top ul li{
     list-style:none;
     float:left;
+    position:relative;
 }
 .h-top .rh-top ul li.spacer{
     width:1px;
@@ -145,27 +144,28 @@
 }
 .h-top .rh-top ul li .dt a:hover{
     color:#c81623;
-
 }
+
+
 /*我的京东悬浮层*/
 .h-top .rh-top ul li.dropdown .dropdown-layer{
     position:absolute;
-    top:30px;
+    left:-1px;
     background: #fff;
     z-index:10;
     border:1px solid #e4e4e4;
 }
-.fore4 .dropdown-layer{
+.rh-top .fore4 .dropdown-layer{
     display:none;
     width:280px;
 }
-.fore4 .dropdown-layer .userinfo a:hover{
+.rh-top .fore4 .dropdown-layer .userinfo a:hover{
     color:#c81623;
 }
-.fore4 .dropdown-layer .userinfo{
+.rh-top .fore4 .dropdown-layer .userinfo{
     padding:10px 0 10px 15px;
 }
-.fore4 .dropdown-layer .userinfo img{
+.rh-top .fore4 .dropdown-layer .userinfo img{
     width:60px;
     height:60px;
     border-radius:50%;
@@ -173,128 +173,125 @@
     -webkit-border-radius:50%;
     float:left;
 }
-.fore4 .dropdown-layer .userinfo dl{
+.rh-top .fore4 .dropdown-layer .userinfo dl{
     margin:8px 0 0 70px;
     line-height:24px;
 }
-.fore4 .dropdown-layer .userinfo a,.fore4 .dropdown-layer .otherlist a{
+.rh-top .fore4 .dropdown-layer .userinfo a,.fore4 .dropdown-layer .otherlist a{
     text-decoration:none;
     color:#666;
 }
-.fore4 .dropdown-layer .userinfo dl dt a{
+.rh-top .fore4 .dropdown-layer .userinfo dl dt a{
     font-weight:bold;
     /*font-family: PingFangSC-Light, "helvetica neue", "hiragino sans gb", tahoma, "microsoft yahei ui", "microsoft yahei", simsun, sans-serif;*/
 }
-.fore4 .dropdown-layer .otherlist{
+.rh-top .fore4 .dropdown-layer .otherlist{
     padding:10px 0 10px 15px;
 }
-.fore4 .dropdown-layer .otherlist .item{
+.rh-top .fore4 .dropdown-layer .otherlist .item{
     width:80px;
     float:left;
     line-height:24px;
     margin-right:44px;
 }
-.fore4 .dropdown-layer .otherlist a:hover{
+.rh-top .fore4 .dropdown-layer .otherlist a:hover{
     color:#c81623;
 }
-.fore7 .dropdown-layer{
+.rh-top .fore7 .dropdown-layer{
     display:none;
 }
-.fore7 .dropdown-layer a{
+.rh-top .fore7 .dropdown-layer a{
     display:block;
     position:absolute;
     background:#fff;
     opacity:0;
 }
-
-.fore7 .dropdown-layer a.a{
+.rh-top .fore7 .dropdown-layer a.a{
     width:86px;
     height:20px;
     top:8px;
     left:94px;
 }
-.fore7 .dropdown-layer a.a1{
+.rh-top .fore7 .dropdown-layer a.a1{
     width:48px;
     height:44px;
     top:44px;
 }
-.fore7 .dropdown-layer a.b{
+.rh-top .fore7 .dropdown-layer a.b{
     left:94px;
 }
-.fore7 .dropdown-layer a.c{
+.rh-top .fore7 .dropdown-layer a.c{
     left:152px;
 }
-.fore7 .dropdown-layer a.d{
+.rh-top .fore7 .dropdown-layer a.d{
     left:210px;
     width:40px;
 }
-.fore7 .dropdown-layer a.e{
+.rh-top .fore7 .dropdown-layer a.e{
     width:94px;
     height:28px;
     top:100px;
     left:94px;
 }
-.fore7 .dropdown-layer a.f{
+.rh-top .fore7 .dropdown-layer a.f{
     width:48px;
     height:44px;
     top:142px;
     left:94px;
 }
-.fore7 .dropdown-layer a.g{
+.rh-top .fore7 .dropdown-layer a.g{
     width:48px;
     height:44px;
     top:142px;
     left:152px;
 }
-.fore8 .dropdown-layer{
+.rh-top .fore8 .dropdown-layer{
     display:none;
+    width:83px;
 }
-.fore9 .dropdown-layer{
+.rh-top .fore9 .dropdown-layer{
     display:none;
     width:170px;
     padding-left:10px;
 }
-.fore9 .dropdown-layer .client{
+.rh-top .fore9 .dropdown-layer .client{
     padding:5px 0;
     border-bottom:1px dashed #e4e4e4;
 }
-.fore9 .dropdown-layer .business{
+.rh-top .fore9 .dropdown-layer .business{
     padding:5px 0;
 }
-.fore9 .dropdown-layer dl{
+.rh-top .fore9 .dropdown-layer dl{
     overflow:hidden;
     line-height:24px;
 }
-
-.fore9 .dropdown-layer dl dt{
+.rh-top .fore9 .dropdown-layer dl dt{
     font-weight:bold;
 }
-.fore9 .dropdown-layer dl dd{
+.rh-top .fore9 .dropdown-layer dl dd{
     width:70px;
     float:left;
     margin-right:14px;
 } 
-
-.fore9 .dropdown-layer dl a{
+.rh-top .fore9 .dropdown-layer dl a{
     text-decoration:none;
     color:#666;
 }
-.fore9 .dropdown-layer dl dd a:hover{
+.rh-top .fore9 .dropdown-layer dl dd a:hover{
     color:#c81623;
 }
-.fore10 .dropdown-layer1{
+.rh-top .fore10 .dropdown-layer1{
     display:none;
     width:1210px;
     margin:0 auto;
     padding:20px 0 16px;
     position:absolute;
-    top:30px;
-    right:67px;
+    right:-1px;
     background: #fff;
     z-index:10;
     border:1px solid #e4e4e4;
 }
-.fore10 .dropdown-layer1 .netnav1,.netnav2,.netnav3,.netnav4{
+.rh-top .fore10 .dropdown-layer1 .netnav1,.netnav2,.netnav3,.netnav4{
     width:259px;
     /*overflow:hidden;*/
     float:left;
@@ -302,37 +299,37 @@
     border-right:1px solid #e4e4e4;
     padding-left:20px;
 }
-.fore10 .dropdown-layer1 .netnav1{
+.rh-top .fore10 .dropdown-layer1 .netnav1{
     width:347px;
 }
-.fore10 .dropdown-layer1 dl dt{
+.rh-top .fore10 .dropdown-layer1 dl dt{
     font-size:14px;
     font-weight:bold;
     color:#666;  
     margin-bottom:6px;
 }
-.fore10 .dropdown-layer1 dl dd{
+.rh-top .fore10 .dropdown-layer1 dl dd{
     width:74px;
     float:left;
     margin-right:12px;
 }
-.fore10 .dropdown-layer1 dl dd a{
+.rh-top .fore10 .dropdown-layer1 dl dd a{
     text-decoration:none;
     color:#666;
 }
-.fore10 .dropdown-layer1 dl dd a:hover{
+.rh-top .fore10 .dropdown-layer1 dl dd a:hover{
     color:#c81623;
 }
 
 
 .head .h-main{
-    width:100%;
+    width:1210px;
     height:100px;
+    margin:0 auto;
 }
 .h-main .logo{
     width:360px;
     padding:20px 0;
-    margin-left:70px;
     float:left;
 }
 .h-main .search{
@@ -477,10 +474,10 @@
 }
 
  .h-foot{
-    width:100%;
+    width:1210px;
     height:44px;
     border-bottom:2px solid #B1191A;
-    position:absolute;
+    position:relative;
     z-index:6;
     margin-top:-1px;
 }
