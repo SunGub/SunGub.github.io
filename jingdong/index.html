@@ -11,7 +11,7 @@ html,body{
     width:100%;
     height:100%;
     font:12px/150% Arial,Verdana,宋体;
-    behavior:url(css/csshover.htc);/*csshover.htc可以解决ie6下hover不起作用等兼容问题*/
+    behavior:url(css/csshover.htc);/*csshover.htc可以解决ie6下hover不起作用等兼容问题*/ 
 }
 
 .box{
@@ -279,7 +279,7 @@ html,body{
 
 
 /*轮播*/
-.slider{
+.inner .slider{
     width:730px;
     height: 454px;
     position:absolute;
@@ -315,7 +315,7 @@ html,body{
     cursor:pointer;
 }
 .slider .lside,.slider .rside{
-    display:none;
+    /*display:none;*/
     width:28px;
     height:62px;
     line-height:62px;
@@ -480,12 +480,11 @@ html,body{
     width:1210px;
     margin:0 auto;
     position:relative;
-    top:510px;
+    top:475px;
 }
 .f-top{
-    height:151px;
-    margin:10px 0 20px;
-    background:green;
+    width:1210px;
+    height:183px;
 }
 
 
@@ -496,29 +495,223 @@ html,body{
     height:151px;
     background:url("img/homebg.png") -213px -136px;
     background-color: #fff;
+    float:left;
 }
 
 
 
 
 
-.slider2{
+
+
+.f-top .slider{
+    float:left;
     width:1000px;
-     height:151px;
+    height:164px;
+    position:relative;
 }
-
-
-
-
-
+.f-top .slider ul{
+    width:6000px;
+    position:absolute;
+    left:-1000px;
+}
+.f-top .slider ul li{
+    list-style:none;
+    float:left;
+    width:1000px;
+}
+.f-top .slider ul li .img1,.f-top .slider ul li .img2,.f-top .slider ul li .img3{
+    width:249px;
+    margin-right:1px;
+}
+.f-top .slider ul li .pic{
+    float:left;
+    overflow:hidden;
+}
 .f-middle{
     height:289px;
-    background:#666;
 }
+.f-middle .guess{
+    height:36px;
+}
+h2{
+    color:#333;
+    font-size:20px;
+    font-family:"微软雅黑";
+    font-weight:400; 
+}
+.f-middle .guess h2{
+    float:left;
+    padding-right:228px;
+    background:url("./img/homebg.png") 85px -91px;
+    line-height:30px;
+
+}
+.f-middle .guess a{
+    height:18px;
+    float:right;
+    padding-right:25px;
+    margin-top:8px;
+    background:url("./img/homebg.png") -310px -5px;
+    text-decoration:none;
+    color:#666;
+}
+.f-middle .guess a:hover{
+    color:#C81623;
+    background-position:-310px -29px;
+}
+.f-middle .goods{
+    height:232px;
+    border:1px solid #ededed;
+}
+.f-middle .goods li{
+    list-style:none;
+    float:left;
+    width:201px;
+}
+.f-middle .goods .g-pic{
+    padding:20px 30px 0;
+    margin-bottom:10px;
+}
+.f-middle .goods .g-info{
+    display: block;
+    margin-top:;
+    padding:0 36px;
+    border-right:1px solid #e6e6e6;
+}
+.g-name{
+    height:36px;
+    overflow:hidden;
+    margin-bottom:6px;
+}
+.g-name a{
+    text-decoration:none;
+    color:#666;
+}
+.g-price{
+    color:#b51d1a;
+    font-size:18px;
+}
+.f-middle .goods a:hover{
+    color:#C81623;
+}
+
+
+
+
+
 .f-foot{
     height:463px;
-    background:#333;
 }
+.f-foot a{
+    text-decoration:none;
+}
+.f-foot h2{
+    height:36px;
+    line-height:36px;
+}
+.qualitylife a{
+    display:block;
+    border:
+}
+.q1,.q2,.q3,.brands{
+    float:left;
+    width:402px;
+    height:100%;
+    border:1px solid #ededed;
+    background:#f7f7f7;
+    overflow:hidden;
+}
+.q-item{
+    width:402px;
+    height:246px;
+    border-bottom:1px solid #ededed;
+    position:relative;
+}
+.q-item .area-tit{
+    line-height:40px;
+    text-align:center;
+    color:#333;
+    font-size:15px;
+    font-weight:700;
+    font-family:"微软雅黑";
+    border-bottom:1px dashed #e0e0e0;
+    margin:0 20px;
+}
+.q-tit{
+    position:absolute;
+    font-family:微软雅黑;
+    color:#333;
+}
+.q-item .q-tit{
+    top:109px;
+    left:45px;
+
+}
+.q-tit .tit{
+    font-size:16px;
+    font-weight:700;
+    margin-bottom:12px;
+}
+.q-tit .promotion{
+    color:#c81623;
+}
+.q-item-small{
+    float:left;
+    width:200px;
+    overflow:hidden;
+    position:relative;
+    border-right:1px solid #ededed; 
+}
+.q-item-small .q-tit{
+    top:48px;
+    left:10px;
+}
+.q2{
+    width:228px;
+    background:#fff;
+}
+.q2 a{
+    width:228px;
+}
+.q2 .q-item .q-tit{
+    top:109px;
+    left:10px;
+}
+.brands{
+    width:171px;
+    background:#fff; 
+}
+.brands ul{
+    border-right:1px dashed #ededed;
+    width:85px;
+}
+.brands ul li{
+    list-style:none;
+    width:74px;
+    height: 57px;
+    border-bottom:1px dashed #ededed;
+    position:relative;
+}
+.brands ul li a{
+    width:85px;
+    height: 57px;
+    display:block;
+    position:absolute;
+    top:0;
+    text-align:center;
+}
+.brands .left li a{
+    right:0;
+}
+.brands .left li{
+    float:right;
+}
+.brands .right li{
+   float:left;
+}
+
+
 
 
 
@@ -547,8 +740,8 @@ html,body{
             clearInterval(time1);
             //console.log("进入");
         },function(){
-            $(".slider .lside").css("display","none");
-            $(".slider .rside").css("display","none");
+            // $(".slider .lside").css("display","none");
+            // $(".slider .rside").css("display","none");
             time1=setInterval(function(){myInterval(1);},2000);
             //console.log("离开");          
         });
@@ -978,19 +1171,22 @@ html,body{
     </div>
 </div>
 <!-- 头部最下面的块 -->
-<div class="h-foot">
-    <ul>
-        <li><a href="#">服装城</a></li>
-        <li><a href="#">美妆馆</a></li>
-        <li><a href="#">京东超市</a></li>
-        <li><a href="#">生鲜</a></li>
-        <li><a href="#">全球购</a></li>
-        <li><a href="#">闪购</a></li>
-        <li><a href="#">团购</a></li>
-        <li><a href="#">拍卖</a></li>
-        <li><a href="#">金融</a></li>
-    </ul>
-</div> 
+<div style="width:100%;border-bottom:2px solid #B1191A;">
+    <div class="h-foot">
+        <ul>
+            <li><a href="#">服装城</a></li>
+            <li><a href="#">美妆馆</a></li>
+            <li><a href="#">京东超市</a></li>
+            <li><a href="#">生鲜</a></li>
+            <li><a href="#">全球购</a></li>
+            <li><a href="#">闪购</a></li>
+            <li><a href="#">团购</a></li>
+            <li><a href="#">拍卖</a></li>
+            <li><a href="#">金融</a></li>
+        </ul>
+    </div> 
+</div>
+
 <div class="box">
     <div class="inner" style="position: relative;">
         <!--左侧列表栏-->
@@ -4496,12 +4692,353 @@ html,body{
 <div class="foot">
     <div class="f-top">
         <div class="click"></div>
-        <div class="slider2"></div>
+        <div class="slider">
+            <div class="lside" style="top:44px;">&lt;</div>
+            <div class="rside" style="right:0;top:44px;">&gt;</div>
+
+            <ul>
+                <li class="li4">
+                    <div class="img1 pic">
+                        <a href="#"><img src="./img/d1.jpg"></a>
+                    </div>
+                    <div class="img2 pic">
+                        <a href="#"><img src="./img/d2.jpg"></a>
+                    </div>
+                    <div class="img3 pic">
+                        <a href="#"><img src="./img/d3.jpg"></a>
+                    </div>
+                    <div class="img4 pic">
+                        <a href="#"><img src="./img/d4.jpg"></a>
+                    </div>
+                </li>
+                <li class="li1">
+                    <div class="img1 pic">
+                        <a href="#"><img src="./img/a1.jpg"></a>
+                    </div>
+                    <div class="img2 pic">
+                        <a href="#"><img src="./img/a2.jpg"></a>
+                    </div>
+                    <div class="img3 pic">
+                        <a href="#"><img src="./img/a3.jpg"></a>
+                    </div>
+                    <div class="img4 pic">
+                        <a href="#"><img src="./img/a4.jpg"></a>
+                    </div>
+                </li>
+                <li class="li2">
+                    <div class="img1 pic">
+                        <a href="#"><img src="./img/b1.jpg"></a>
+                    </div>
+                    <div class="img2 pic">
+                        <a href="#"><img src="./img/b2.jpg"></a>
+                    </div>
+                    <div class="img3 pic">
+                        <a href="#"><img src="./img/b3.jpg"></a>
+                    </div>
+                    <div class="img4 pic">
+                        <a href="#"><img src="./img/b4.jpg"></a>
+                    </div>
+                </li>
+                <li class="li3">
+                    <div class="img1 pic">
+                        <a href="#"><img src="./img/c1.jpg"></a>
+                    </div>
+                    <div class="img2 pic">
+                        <a href="#"><img src="./img/c2.jpg"></a>
+                    </div>
+                    <div class="img3 pic">
+                        <a href="#"><img src="./img/c3.jpg"></a>
+                    </div>
+                    <div class="img4 pic">
+                        <a href="#"><img src="./img/c4.jpg"></a>
+                    </div>
+                </li>
+                <li class="li4">
+                    <div class="img1 pic">
+                        <a href="#"><img src="./img/d1.jpg"></a>
+                    </div>
+                    <div class="img2 pic">
+                        <a href="#"><img src="./img/d2.jpg"></a>
+                    </div>
+                    <div class="img3 pic">
+                        <a href="#"><img src="./img/d3.jpg"></a>
+                    </div>
+                    <div class="img4 pic">
+                        <a href="#"><img src="./img/d4.jpg"></a>
+                    </div>
+                </li>
+                <li class="li1">
+                    <div class="img1 pic">
+                        <a href="#"><img src="./img/a1.jpg"></a>
+                    </div>
+                    <div class="img2 pic">
+                        <a href="#"><img src="./img/a2.jpg"></a>
+                    </div>
+                    <div class="img3 pic">
+                        <a href="#"><img src="./img/a3.jpg"></a>
+                    </div>
+                    <div class="img4 pic">
+                        <a href="#"><img src="./img/a4.jpg"></a>
+                    </div>
+                </li>
+
+
+
+
+            </ul>
+
+
+
+
+
+        </div>
     </div>
     <div class="f-middle">
-        
+        <div class="guess">
+            <h2>猜你喜欢</h2>
+            <a href="#">换一批</a>
+        </div>
+        <div class="goods">
+            <ul>
+                <li>
+                    <div class="g-pic">
+                        <a href="#"><img title="【京东超市】力士(LUX)精油香氛沐浴乳 幽莲魅肤720ml(沐浴露)" src="./img/like3.jpg"></a>
+                    </div> 
+                    <div class="g-info">
+                        <div class="g-name">
+                            <a href="#" title="【京东超市】力士(LUX)精油香氛沐浴乳 幽莲魅肤720ml(沐浴露)">【京东超市】力士(LUX)精油香氛沐浴乳 幽莲魅肤720ml(沐浴露)</a>
+                        </div>
+                        <div class="g-price">
+                            <i>￥</i>39.17
+                        </div>
+                    </div>   
+                </li>
+                <li>
+                    <div class="g-pic">
+                        <a href="#"><img title="乐视（Le）乐2（X620）32GB 金色 移动联通电信4G手机 双卡双待" src="./img/like1.jpg"></a>
+                    </div> 
+                    <div class="g-info">
+                        <div class="g-name">
+                            <a href="#" title="乐视（Le）乐2（X620）32GB 金色 移动联通电信4G手机 双卡双待">乐视（Le）乐2（X620）32GB 金色 移动联通电信4G手机 双卡双待</a>
+                        </div>
+                        <div class="g-price">
+                            <i>￥</i>1099.00
+                        </div>
+                    </div>   
+                </li>
+
+                <li>
+                    <div class="g-pic">
+                        <a href="#"><img title="鲜品屋 天天坚果炒货混合综合干果仁礼盒装每日一包 猴赛雷 7 袋装" src="./img/like4.jpg"></a>
+                    </div> 
+                    <div class="g-info">
+                        <div class="g-name">
+                            <a href="#" title="鲜品屋 天天坚果炒货混合综合干果仁礼盒装每日一包 猴赛雷 7 袋装">鲜品屋 天天坚果炒货混合综合干果仁礼盒装每日一包 猴赛雷 7 袋装</a>
+                        </div>
+                        <div class="g-price">
+                            <i>￥</i>29.90
+                        </div>
+                    </div>   
+                </li>
+
+                <li>
+                    <div class="g-pic">
+                        <a href="#"><img title="依能 苏打水 青柠味 350ml*15瓶/箱 无糖 无汽 饮料" src="./img/like6.jpg"></a>
+                    </div> 
+                    <div class="g-info">
+                        <div class="g-name">
+                            <a href="#" title="依能 苏打水 青柠味 350ml*15瓶/箱 无糖 无汽 饮料">依能 苏打水 青柠味 350ml*15瓶/箱 无糖 无汽 饮料</a>
+                        </div>
+                        <div class="g-price">
+                            <i>￥</i>49.00
+                        </div>
+                    </div>   
+                </li>
+
+                <li>
+                    <div class="g-pic">
+                        <a href="#"><img title="【买4包减10元】泓昇西域仙果_枣夹核桃 夹心枣 红枣加核桃仁258g" src="./img/like2.jpg"></a>
+                    </div> 
+                    <div class="g-info">
+                        <div class="g-name">
+                            <a href="#" title="【买4包减10元】泓昇西域仙果_枣夹核桃 夹心枣 红枣加核桃仁258g">【买4包减10元】泓昇西域仙果_枣夹核桃 夹心枣 红枣加核桃仁258g</a>
+                        </div>
+                        <div class="g-price">
+                            <i>￥</i>29.90
+                        </div>
+                    </div>   
+                </li>
+
+                <li>
+                    <div class="g-pic">
+                        <a href="#"><img title="【京东超市】宁安堡宁夏枸杞250g/袋" src="./img/like5.jpg"></a>
+                    </div> 
+                    <div class="g-info" style="border:none;">
+                        <div class="g-name">
+                            <a href="#" title="【京东超市】宁安堡宁夏枸杞250g/袋">【京东超市】宁安堡宁夏枸杞250g/袋</a>
+                        </div>
+                        <div class="g-price">
+                            <i>￥</i>21.80
+                        </div>
+                    </div>   
+                </li>
+
+
+
+
+            </ul>
+        </div>
     </div>
-    <div class="f-foot"></div>
+    <div class="f-foot">
+        <h2>京东 · 品质生活</h2>
+        <div class="qualitylife">
+            <div class="q1" style="border-right:none">
+                <a target="_blank" href="//xinpin.jd.com/" class="q-item">
+                    <p class="area-tit">新发现</p>
+                    <div class="q-tit">
+                        <p class="tit">索尼PS VR</p>
+                        <p class="desc">限时抢购</p>
+                        <p class="promotion">给你现实的临场感</p>
+                    </div>
+                    <img src="./img/qualitylife/suoni.jpg">
+                </a>
+                <a target="_blank" href="//xinpin.jd.com/presale.html" class="q-item-small">
+                    <div class="q-tit">
+                        <p class="tit">新趋势</p>
+                        <p class="desc">独家首发</p>
+                        <p class="promotion">定金翻三倍</p>
+                    </div>
+                    <img src="./img/qualitylife/decoration.jpg">
+                </a>
+                <a target="_blank" href="//miao.jd.com/" class="q-item-small"  style="border-right:none">
+                    <div class="q-tit">
+                        <p class="tit">限时秒杀</p>
+                        <p class="desc">浪漫夏季</p>
+                        <p class="promotion">法国红酒两支69</p>
+                    </div>
+                    <img src="./img/qualitylife/wine.jpg">
+                </a>
+            </div>
+            <div class="q2" style="border-right:none">
+                <a target="_blank" href="//hao.jd.com/" class="q-item">
+                    <p class="area-tit">好东西</p>
+                    <div class="q-tit">
+                        <p class="tit">达人推荐</p>
+                        <p class="desc">曲面视界时代</p>
+                        <p class="promotion">时空穿梭 声色俱佳</p>
+                    </div>
+                    <img src="./img/qualitylife/qumian.jpg">
+                </a>
+                <a target="_blank" href="//hao.jd.com/glist.html" class="q-item-small">
+                    <div class="q-tit">
+                        <p class="tit">发现好物</p>
+                        <p class="desc">路由器中的外星人</p>
+                        <p class="promotion">腾达旗舰新品</p>
+                    </div>
+                    <img src="./img/qualitylife/luyouqi.jpg">
+                </a>
+            </div>
+            <div class="q3" style="border-right:none">
+                <a target="_blank" href="//brand.jd.com/?brandId=18374" class="q-item">
+                    <p class="area-tit">品牌街</p>
+                    <img src="./img/qualitylife/mi.jpg">
+                </a>
+                <a target="_blank" href="//sale.jd.com/act/EgGCtSHqNB.html" class="q-item-small">
+                    <div class="q-tit">
+                        <p class="tit">国际服饰</p>
+                        <p class="desc">职场风凉鞋</p>
+                        <p class="promotion">3件9折</p>
+                    </div>
+                    <img src="./img/qualitylife/shoes.jpg">
+                </a>
+                <a target="_blank" href="//brand.jd.com/temai.html?brandId=132051" class="q-item-small">
+                
+                    <img src="./img/qualitylife/suit.jpg">
+                </a>
+            </div>
+            <div class="brands">
+                <ul class="left" style="float:left;">
+                    <li>
+                        <a target="_blank" href="">
+                            <img src="./img/qualitylife/dapai/huawei.jpg">
+                        </a>
+                    </li>
+                     <li>
+                        <a target="_blank" href="">
+                            <img src="./img/qualitylife/dapai/meizu.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="">
+                            <img src="./img/qualitylife/dapai/vivo.jpg">
+                        </a>
+                    </li>
+                     <li>
+                        <a target="_blank" href="">
+                            <img src="./img/qualitylife/dapai/oppo.jpg">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="">
+                            <img src="./img/qualitylife/dapai/midea.jpg">
+                        </a>
+                    </li>
+                     <li>
+                        <a target="_blank" href="">
+                            <img src="./img/qualitylife/dapai/xiaomi.jpg">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="">
+                            <img src="./img/qualitylife/dapai/li-ning.jpg">
+                        </a>
+                    </li>
+                </ul>
+                <ul class="right" style="float:left;border-right:none">
+                    <li>
+                        <a target="_blank" href="">
+                            <img src="./img/qualitylife/dapai/leshi.jpg">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="">
+                            <img src="./img/qualitylife/dapai/sansung.jpg">
+                        </a>
+                    </li>
+                     <li>
+                        <a target="_blank" href="">
+                            <img src="./img/qualitylife/dapai/anta.jpg">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="">
+                            <img src="./img/qualitylife/dapai/leshi.jpg">
+                        </a>
+                    </li>
+                     <li>
+                        <a target="_blank" href="">
+                            <img src="./img/qualitylife/dapai/qipinlang.jpg">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="">
+                            <img src="./img/qualitylife/dapai/coach.jpg">
+                        </a>
+                    </li>
+                     <li>
+                        <a target="_blank" href="">
+                            <img src="./img/qualitylife/dapai/haier.jpg">
+                        </a>
+                    </li>
+
+
+
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
 
 
