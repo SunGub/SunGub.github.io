@@ -25,7 +25,7 @@ html,body{
 }
 /*左侧列表栏*/
 .topmenu{
-	width:210px;
+	width:209px;
     border:1px solid #B1191A;
 }
 .toptitle{
@@ -95,7 +95,7 @@ html,body{
     border:1px solid #b61d1d;
     background:#f7f7f7;
 	position:absolute;
-	left:210px;
+	left:209px;
 	padding-top:20px;
 }
 /*  item-brands  */
@@ -120,7 +120,7 @@ html,body{
     float: left;
     display: inline;
     height: 24px;
-    margin-top:-22px;
+    margin-top:-20px;
     padding: 20px 0 0 20px;
     background: #f7f7f7;
     overflow: hidden;
@@ -159,7 +159,7 @@ html,body{
     float: left;
     padding: 6px 0 2px 20px;
     background: #f7f7f7;
-    min-height: 409px;
+    min-height: 408px;
 }
 .submenu .subitems dl{
     width: 100%;
@@ -228,56 +228,51 @@ html,body{
     width:168px;
     height:134px; 
 }
-
-
 .submenu.submenu1{
-    top:0px;
+    top:-1px;
 }
 .submenu.submenu2{
-    top:-31px;
+    top:-32px;
 }
 .submenu.submenu3{
-    top:-62px;
+    top:-63px;
 }
 .submenu.submenu4{
-    top:-93px;
+    top:-94px;
 }
 .submenu.submenu5{
-    top:-124px;
+    top:-125px;
 }
 .submenu.submenu6{
-    top:-155px;
+    top:-156px;
 }
 .submenu.submenu7{
-    top:-186px;
+    top:-187px;
 }
 .submenu.submenu8{
-    top:-217px;
+    top:-218px;
 }
 .submenu.submenu9{
-    top:-248px;
+    top:-249px;
 }
 .submenu.submenu10{
-    top:-279px;
+    top:-280px;
 }
 .submenu.submenu11{
-    top:-310px;
+    top:-311px;
 }
 .submenu.submenu12{
-    top:-341px;
+    top:-342px;
 }
 .submenu.submenu13{
-    top:-372px;
+    top:-373px;
 }
 .submenu.submenu14{
-    top:-403px;
+    top:-404px;
 }
 .submenu.submenu15{
-    top:-434px;
+    top:-435px;
 }
-
-
-
 /*轮播*/
 .inner .slider{
     width:730px;
@@ -315,7 +310,7 @@ html,body{
     cursor:pointer;
 }
 .slider .lside,.slider .rside{
-    /*display:none;*/
+    display:none;
     width:28px;
     height:62px;
     line-height:62px;
@@ -331,10 +326,6 @@ html,body{
     font-family:"simsun";
     cursor:pointer;
 }
-
-
-
-
 /*右侧信息栏*/
 .w{
     width:246px;
@@ -468,11 +459,14 @@ html,body{
     color:#C81623;
 }
 .w .right-pic{
-    width:250px;
+    width:246px;
     height:75px;
     margin-top:5px;
     background-image:url("img/right-pic.jpg");
 }
+
+
+
 
 
 
@@ -483,51 +477,89 @@ html,body{
     top:475px;
 }
 .f-top{
-    width:1210px;
+    /*width:1210px;*/
     height:183px;
 }
-
-
-
 
 .click{
     width:210px;
     height:151px;
     background:url("img/homebg.png") -213px -136px;
     background-color: #fff;
-    float:left;
+    float:left;/*
+    position:absolute;
+    z-index:3;*/
 }
 
-
-
-
-
-
-
-.f-top .slider{
+.f-top .f-slider{
     float:left;
     width:1000px;
     height:164px;
     position:relative;
 }
-.f-top .slider ul{
+.f-slider .f-lside,.f-slider .f-rside{
+    display:none;
+    width:28px;
+    height:62px;
+    line-height:62px;
+    text-align:center;
+    background-color:#000;
+    opacity:0.2;
+    position:absolute;
+    z-index:2;
+    color:white;
+    font-size:22px;
+    /*font-style:normal;*/
+    font-family:"simsun";
+    cursor:pointer;
+}
+.slider2{
+    width:1000px;
+    height:164px;
+    overflow:hidden;
+    position:absolute;
+    left:0;
+}
+.slider2:hover~.f-lside,.slider2:hover~.f-rside{
+    display:block;
+}
+
+.f-lside:hover,.f-lside:hover~.f-rside{
+    display:block;
+}
+
+
+.f-rside:hover,.f-rside:hover .f-lside{
+    display:block;
+}
+
+
+.f-top .f-slider ul{
     width:6000px;
     position:absolute;
     left:-1000px;
+    transition:left 0.2s;
 }
-.f-top .slider ul li{
+.f-top .f-slider ul li{
     list-style:none;
     float:left;
     width:1000px;
 }
-.f-top .slider ul li .img1,.f-top .slider ul li .img2,.f-top .slider ul li .img3{
+.f-top .f-slider ul li .img1,.f-top .f-slider ul li .img2,.f-top .f-slider ul li .img3{
     width:249px;
     margin-right:1px;
 }
-.f-top .slider ul li .pic{
+.f-top .f-slider ul li .pic{
     float:left;
     overflow:hidden;
 }
+
+
+
+
+
+
+
 .f-middle{
     height:289px;
 }
@@ -720,43 +752,6 @@ h2{
     var time1=null;
     /*初始化函数：打开页面就执行*/
     $(function(){
-        /* 改变小点和轮播图片*/
-        $(".slider-extra ul li").hover(function(){      
-            $(this).css({"background":"#b61b1f","transition":"all 1s"}).addClass("slider-on").siblings().css({"background":"#3e3e3e","transition":"all 1s"}).removeClass("slider-on");/*鼠标移动到 数字 上时添加样式和slider-on类，其他的数字移除slider-on类*/
-            nb=Number($(this).text());
-            nb-=1;
-            /*和数字对应的图片显示，其他图片隐藏起来*/
-            $(".slider-main li").eq(nb).css({"z-index":"1","opacity":"1","transition":"all 1s"}).siblings().css({"z-index":"0","opacity":"0","transition":"all 1s"});
-            clearInterval(time1);
-        },function(){
-            time1=setInterval(function(){myInterval(1);},2000);
-        });
-
-        //左右两侧的箭头显示与消失
-        /*鼠标移动到图片上时图片不变，离开时又执行setInterval()*/
-        $(".slider-main li,.slider .lside,.slider .rside").hover(function(){
-            $(".slider .lside").css("display","block");
-            $(".slider .rside").css("display","block");
-            clearInterval(time1);
-            //console.log("进入");
-        },function(){
-            // $(".slider .lside").css("display","none");
-            // $(".slider .rside").css("display","none");
-            time1=setInterval(function(){myInterval(1);},2000);
-            //console.log("离开");          
-        });
-
-        /*图片间隔2s自动变换*/
-        time1=setInterval(function(){myInterval(1);},2000);
-   
-        //点击两侧的箭头变换图片
-        $(".slider .lside").click(function(){
-            myInterval(-1);
-        });
-        $(".slider .rside").click(function(){
-            myInterval(1);
-        });
-
         /*上下箭头切换 & dropdown-layer块显示和隐藏*/
         $(".h-top .lh-top .dropdown").hover(function(){
             $(this).addClass("hoverarrow");
@@ -832,6 +827,89 @@ h2{
             w=$(".fore0.dropdown").css("width");
             $(".lh-top .dropdown-layer .dd-spacer").css("width",w);
         }); 
+        
+
+
+        /*轮播*/ 
+        /* 改变小点和轮播图片*/
+        $(".slider-extra ul li").hover(function(){      
+            $(this).css({"background":"#b61b1f","transition":"all 1s"}).addClass("slider-on").siblings().css({"background":"#3e3e3e","transition":"all 1s"}).removeClass("slider-on");/*鼠标移动到 数字 上时添加样式和slider-on类，其他的数字移除slider-on类*/
+            nb=Number($(this).text());
+            nb-=1;
+            /*和数字对应的图片显示，其他图片隐藏起来*/
+            $(".slider-main li").eq(nb).css({"z-index":"1","opacity":"1","transition":"all 1s"}).siblings().css({"z-index":"0","opacity":"0","transition":"all 1s"});
+            clearInterval(time1);
+        },function(){
+            time1=setInterval(function(){myInterval(1);},2000);
+        });
+
+        //左右两侧的箭头显示与消失
+        /*鼠标移动到图片上时图片不变，离开时又执行setInterval()*/
+        $(".slider-main li,.slider .lside,.slider .rside").hover(function(){
+            $(".slider .lside").css("display","block");
+            $(".slider .rside").css("display","block");
+            clearInterval(time1);
+            //console.log("进入");
+        },function(){
+            $(".slider .lside").css("display","none");
+            $(".slider .rside").css("display","none");
+            time1=setInterval(function(){myInterval(1);},2000);
+            //console.log("离开");          
+        });
+
+        /*图片间隔2s自动变换*/
+        time1=setInterval(function(){myInterval(1);},2000);
+   
+        //点击两侧的箭头变换图片
+        $(".slider .lside").click(function(){
+            myInterval(-1);
+        });
+        $(".slider .rside").click(function(){
+            myInterval(1);
+        });
+
+       /*左侧列表的悬浮层高度随滚动条的变化情况*/
+       submenutop = null;
+       $(".topmenu li").hover(function(){
+            var sH = $(document).scrollTop(); //视图的高度
+            submenutop = $(this).find(".submenu").css("top");//鼠标移动到当前submemu悬浮层的高度
+            if(sH>174){  //当视图高度大于上面那条红线的高度174时
+                addtop = sH - 174;
+                a = submenutop.length - 2;//获取top字符串数字部分的长度a
+                n = submenutop.substr(0,a);//提取top字符串中下标从0到a的部分
+                nowh = addtop + Number(n);//现在高度为超出的高度与原来高度之和
+                $(this).find(".submenu").css("top",nowh+"px");
+            }
+       },function(){
+            $(this).find(".submenu").css("top",submenutop);//鼠标离开时当前submemu悬浮层时高度设置为原来的高度值
+       });
+
+       $(".f-lside").click(function(){
+            a = $(".f-slider ul").css("left");
+            b = a.length - 2;
+            n = Number(a.substr(0,b));
+            if(n%1000==0){
+                if(n>=-1000){
+                    $(".f-slider ul").css("left","-4000px");
+                }else{
+                    $(".f-slider ul").css("left",(n+1000)+"px");
+                }   
+            }
+       });
+       $(".f-rside").click(function(){
+            a = $(".f-slider ul").css("left");
+            b = a.length - 2;
+            n = Number(a.substr(0,b));
+            if(n%1000==0){
+                if(n<=-4000){
+                    $(".f-slider ul").css("left","-1000px");
+                }else{
+                    $(".f-slider ul").css("left",(n-1000)+"px");
+                }
+            }
+       });
+            
+
     });
      
     //控制图片和下面的数字左右轮播
@@ -3278,7 +3356,7 @@ h2{
                         <div class="channels">
                             <a href="http://baby.jd.com/" target="_blank">母婴
                                 <i>&gt;</i>
-                            /a>
+                            </a>
                             <a href="http://channel.jd.com/toys.html" target="_blank">玩具乐器
                                 <i>&gt;</i>
                             </a>
@@ -4692,102 +4770,97 @@ h2{
 <div class="foot">
     <div class="f-top">
         <div class="click"></div>
-        <div class="slider">
-            <div class="lside" style="top:44px;">&lt;</div>
-            <div class="rside" style="right:0;top:44px;">&gt;</div>
-
-            <ul>
-                <li class="li4">
-                    <div class="img1 pic">
-                        <a href="#"><img src="./img/d1.jpg"></a>
-                    </div>
-                    <div class="img2 pic">
-                        <a href="#"><img src="./img/d2.jpg"></a>
-                    </div>
-                    <div class="img3 pic">
-                        <a href="#"><img src="./img/d3.jpg"></a>
-                    </div>
-                    <div class="img4 pic">
-                        <a href="#"><img src="./img/d4.jpg"></a>
-                    </div>
-                </li>
-                <li class="li1">
-                    <div class="img1 pic">
-                        <a href="#"><img src="./img/a1.jpg"></a>
-                    </div>
-                    <div class="img2 pic">
-                        <a href="#"><img src="./img/a2.jpg"></a>
-                    </div>
-                    <div class="img3 pic">
-                        <a href="#"><img src="./img/a3.jpg"></a>
-                    </div>
-                    <div class="img4 pic">
-                        <a href="#"><img src="./img/a4.jpg"></a>
-                    </div>
-                </li>
-                <li class="li2">
-                    <div class="img1 pic">
-                        <a href="#"><img src="./img/b1.jpg"></a>
-                    </div>
-                    <div class="img2 pic">
-                        <a href="#"><img src="./img/b2.jpg"></a>
-                    </div>
-                    <div class="img3 pic">
-                        <a href="#"><img src="./img/b3.jpg"></a>
-                    </div>
-                    <div class="img4 pic">
-                        <a href="#"><img src="./img/b4.jpg"></a>
-                    </div>
-                </li>
-                <li class="li3">
-                    <div class="img1 pic">
-                        <a href="#"><img src="./img/c1.jpg"></a>
-                    </div>
-                    <div class="img2 pic">
-                        <a href="#"><img src="./img/c2.jpg"></a>
-                    </div>
-                    <div class="img3 pic">
-                        <a href="#"><img src="./img/c3.jpg"></a>
-                    </div>
-                    <div class="img4 pic">
-                        <a href="#"><img src="./img/c4.jpg"></a>
-                    </div>
-                </li>
-                <li class="li4">
-                    <div class="img1 pic">
-                        <a href="#"><img src="./img/d1.jpg"></a>
-                    </div>
-                    <div class="img2 pic">
-                        <a href="#"><img src="./img/d2.jpg"></a>
-                    </div>
-                    <div class="img3 pic">
-                        <a href="#"><img src="./img/d3.jpg"></a>
-                    </div>
-                    <div class="img4 pic">
-                        <a href="#"><img src="./img/d4.jpg"></a>
-                    </div>
-                </li>
-                <li class="li1">
-                    <div class="img1 pic">
-                        <a href="#"><img src="./img/a1.jpg"></a>
-                    </div>
-                    <div class="img2 pic">
-                        <a href="#"><img src="./img/a2.jpg"></a>
-                    </div>
-                    <div class="img3 pic">
-                        <a href="#"><img src="./img/a3.jpg"></a>
-                    </div>
-                    <div class="img4 pic">
-                        <a href="#"><img src="./img/a4.jpg"></a>
-                    </div>
-                </li>
-
-
-
-
-            </ul>
-
-
+        <div class="f-slider">
+            <div class="slider2">
+                <ul>
+                    <li class="li4">
+                        <div class="img1 pic">
+                            <a href="#"><img src="./img/d1.jpg"></a>
+                        </div>
+                        <div class="img2 pic">
+                            <a href="#"><img src="./img/d2.jpg"></a>
+                        </div>
+                        <div class="img3 pic">
+                            <a href="#"><img src="./img/d3.jpg"></a>
+                        </div>
+                        <div class="img4 pic">
+                            <a href="#"><img src="./img/d4.jpg"></a>
+                        </div>
+                    </li>
+                    <li class="li1 selected">
+                        <div class="img1 pic">
+                            <a href="#"><img src="./img/a1.jpg"></a>
+                        </div>
+                        <div class="img2 pic">
+                            <a href="#"><img src="./img/a2.jpg"></a>
+                        </div>
+                        <div class="img3 pic">
+                            <a href="#"><img src="./img/a3.jpg"></a>
+                        </div>
+                        <div class="img4 pic">
+                            <a href="#"><img src="./img/a4.jpg"></a>
+                        </div>
+                    </li>
+                    <li class="li2">
+                        <div class="img1 pic">
+                            <a href="#"><img src="./img/b1.jpg"></a>
+                        </div>
+                        <div class="img2 pic">
+                            <a href="#"><img src="./img/b2.jpg"></a>
+                        </div>
+                        <div class="img3 pic">
+                            <a href="#"><img src="./img/b3.jpg"></a>
+                        </div>
+                        <div class="img4 pic">
+                            <a href="#"><img src="./img/b4.jpg"></a>
+                        </div>
+                    </li>
+                    <li class="li3">
+                        <div class="img1 pic">
+                            <a href="#"><img src="./img/c1.jpg"></a>
+                        </div>
+                        <div class="img2 pic">
+                            <a href="#"><img src="./img/c2.jpg"></a>
+                        </div>
+                        <div class="img3 pic">
+                            <a href="#"><img src="./img/c3.jpg"></a>
+                        </div>
+                        <div class="img4 pic">
+                            <a href="#"><img src="./img/c4.jpg"></a>
+                        </div>
+                    </li>
+                    <li class="li4">
+                        <div class="img1 pic">
+                            <a href="#"><img src="./img/d1.jpg"></a>
+                        </div>
+                        <div class="img2 pic">
+                            <a href="#"><img src="./img/d2.jpg"></a>
+                        </div>
+                        <div class="img3 pic">
+                            <a href="#"><img src="./img/d3.jpg"></a>
+                        </div>
+                        <div class="img4 pic">
+                            <a href="#"><img src="./img/d4.jpg"></a>
+                        </div>
+                    </li>
+                    <li class="li1">
+                        <div class="img1 pic">
+                            <a href="#"><img src="./img/a1.jpg"></a>
+                        </div>
+                        <div class="img2 pic">
+                            <a href="#"><img src="./img/a2.jpg"></a>
+                        </div>
+                        <div class="img3 pic">
+                            <a href="#"><img src="./img/a3.jpg"></a>
+                        </div>
+                        <div class="img4 pic">
+                            <a href="#"><img src="./img/a4.jpg"></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="f-lside" style="top:44px;">&lt;</div>
+            <div class="f-rside" style="right:0;top:44px;">&gt;</div>
 
 
 
