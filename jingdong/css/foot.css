@@ -1,0 +1,242 @@
+.foot{
+    width:1210px;
+    margin:0 auto;
+    position:relative;
+    top:475px;
+}
+.f-top{
+    /*width:1210px;*/
+    height:183px;
+}
+.click{
+    width:210px;
+    height:151px;
+    background:url("../img/homebg.png") -213px -136px;
+    background-color: #fff;
+    float:left;
+}
+.f-top .f-slider{
+    float:left;
+    width:1000px;
+    height:164px;
+    position:relative;
+}
+.f-slider .f-lside,.f-slider .f-rside{
+    display:none;
+    width:28px;
+    height:62px;
+    line-height:62px;
+    text-align:center;
+    background-color:#000;
+    opacity:0.2;
+    position:absolute;
+    z-index:2;
+    color:white;
+    font-size:22px;
+    /*font-style:normal;*/
+    font-family:"simsun";
+    cursor:pointer;
+}
+.slider2{
+    width:1000px;
+    height:164px;
+    overflow:hidden;
+    position:absolute;
+    left:0;
+}
+.f-top .f-slider ul{
+    width:6000px;
+    position:absolute;
+    left:-1000px;
+    /*transition:left 1s;*/
+}
+.f-top .f-slider ul li{
+    list-style:none;
+    float:left;
+    width:1000px;
+}
+.f-top .f-slider ul li .img1,.f-top .f-slider ul li .img2,.f-top .f-slider ul li .img3{
+    width:249px;
+    margin-right:1px;
+}
+.f-top .f-slider ul li .pic{
+    float:left;
+    overflow:hidden;
+}
+.f-middle{
+    height:289px;
+}
+.f-middle .guess{
+    height:36px;
+}
+h2{
+    color:#333;
+    font-size:20px;
+    font-family:"微软雅黑";
+    font-weight:400; 
+}
+.f-middle .guess h2{
+    float:left;
+    padding-right:228px;
+    background:url("./img/homebg.png") 85px -91px;
+    line-height:30px;
+
+}
+.f-middle .guess a{
+    height:18px;
+    float:right;
+    padding-right:25px;
+    margin-top:8px;
+    background:url("./img/homebg.png") -310px -5px;
+    text-decoration:none;
+    color:#666;
+}
+.f-middle .guess a:hover{
+    color:#C81623;
+    background-position:-310px -29px;
+}
+.f-middle .goods{
+    height:232px;
+    border:1px solid #ededed;
+}
+.f-middle .goods li{
+    list-style:none;
+    float:left;
+    width:201px;
+}
+.f-middle .goods .g-pic{
+    padding:20px 30px 0;
+    margin-bottom:10px;
+}
+.f-middle .goods .g-info{
+    display: block;
+    margin-top:;
+    padding:0 36px;
+    border-right:1px solid #e6e6e6;
+}
+.g-name{
+    height:36px;
+    overflow:hidden;
+    margin-bottom:6px;
+}
+.g-name a{
+    text-decoration:none;
+    color:#666;
+}
+.g-price{
+    color:#b51d1a;
+    font-size:18px;
+}
+.f-middle .goods a:hover{
+    color:#C81623;
+}
+.f-foot{
+    height:463px;
+}
+.f-foot a{
+    text-decoration:none;
+}
+.f-foot h2{
+    height:36px;
+    line-height:36px;
+}
+.qualitylife a{
+    display:block;
+    border:
+}
+.q1,.q2,.q3,.brands{
+    float:left;
+    width:402px;
+    height:100%;
+    border:1px solid #ededed;
+    background:#f7f7f7;
+    overflow:hidden;
+}
+.q-item{
+    width:402px;
+    height:246px;
+    border-bottom:1px solid #ededed;
+    position:relative;
+}
+.q-item .area-tit{
+    line-height:40px;
+    text-align:center;
+    color:#333;
+    font-size:15px;
+    font-weight:700;
+    font-family:"微软雅黑";
+    border-bottom:1px dashed #e0e0e0;
+    margin:0 20px;
+}
+.q-tit{
+    position:absolute;
+    font-family:微软雅黑;
+    color:#333;
+}
+.q-item .q-tit{
+    top:109px;
+    left:45px;
+
+}
+.q-tit .tit{
+    font-size:16px;
+    font-weight:700;
+    margin-bottom:12px;
+}
+.q-tit .promotion{
+    color:#c81623;
+}
+.q-item-small{
+    float:left;
+    width:200px;
+    overflow:hidden;
+    position:relative;
+    border-right:1px solid #ededed; 
+}
+.q-item-small .q-tit{
+    top:48px;
+    left:10px;
+}
+.q2{
+    width:228px;
+    background:#fff;
+}
+.q2 a{
+    width:228px;
+}
+.q2 .q-item .q-tit{
+    top:109px;
+    left:10px;
+}
+.brands{
+    width:171px;
+    background:#fff; 
+}
+.brands ul{
+    border-right:1px dashed #ededed;
+    width:85px;
+}
+.brands ul li{
+    list-style:none;
+    width:74px;
+    height: 57px;
+    border-bottom:1px dashed #ededed;
+    position:relative;
+}
+.brands ul li a{
+    width:85px;
+    height: 57px;
+    display:block;
+    position:absolute;
+    top:0;
+    text-align:center;
+}
+.brands .left li a{
+    right:0;
+}
+.brands .left li{
+    float:right;
+}
+.brands .right li{
+   float:left;
+}

@@ -4,7 +4,9 @@
 <script src="js/jquery-1.11.1.min.js"></script>
 <link rel="stylesheet" href="css/top.css">
 <link rel="stylesheet" href="css/sidebar.css">
-<title>京东导航列表</title>
+<link rel="stylesheet" href="css/inner.css">
+<link rel="stylesheet" href="css/foot.css">
+<title>京东首页</title>
 <style>
 *{margin:0;padding:0;}
 html,body{
@@ -13,740 +15,6 @@ html,body{
     font:12px/150% Arial,Verdana,宋体;
     behavior:url(css/csshover.htc);/*csshover.htc可以解决ie6下hover不起作用等兼容问题*/ 
 }
-
-.box{
-    width:100%;
-    position:absolute;
-    top:130px;
-}
-.inner{
-    width:1210px;
-    margin:0 auto;   
-}
-/*左侧列表栏*/
-.topmenu{
-	width:209px;
-    border:1px solid #B1191A;
-}
-.toptitle{
-	height:43px;
-	line-height:40px;
-	padding-left:20px;
-	font-size:11pt;
-	font-weight:bold;
-	color:white;
-	background:#B1191A;
-}
-.topmenu li{
-    position:relative;
-    list-style:none;
-	height:31px;
-	line-height:31px;
-    font-family:"微软雅黑";
-	text-align:left;
-	padding-left:8px;
-    background-color:#c81623;
-	z-index:4;
- }
-.topmenu li i{
-    position: absolute;
-    top: 8px;
-    right: 12px;
-    height: 14px;
-    font-style:normal;
-    font-size:9px;
-    line-height: 14px;
-    font-weight:bold;
-    font-family: "consolas";
-    color:white;
-}
-.topmenu li a{
-	color:#fff;
-	font-size:14px;
-	text-decoration:none;
-}
-.topmenu li:hover{
-    background:#f7f7f7;
-}
-.topmenu li:hover>a{
-	text-decoration:none;
-	font-weight:bold;
-	color:#E4393C;
-}
-.topmenu li:hover span{
-    width:20px;
-    height:31px;
-    background:#f7f7f7;
-    display:inline-block;
-    float:right;
-    position:relative;
-    right:-4px;
-    z-index:5;
-}
-.topmenu li:hover .submenu{
-    display:block;
-}
-
-/*.submenu为悬浮层，二级菜单*/
-.submenu{
-    display:none;
-    width:999px;
-    /*height:444px;*/
-    border:1px solid #b61d1d;
-    background:#f7f7f7;
-	position:absolute;
-	left:209px;
-	padding-top:20px;
-}
-/*  item-brands  */
-.submenu .item-brands{
-    float:right;
-    display: inline;
-    width:168px;
-    overflow: hidden;
-    margin: 19px 20px 10px 0;
-    margin-top:0px;
-}
-.submenu .item-brands a{
-    float: left;
-    display: inline;
-    margin: 1px 0 0 1px;
-    width: 83px;
-    height: 35px;
-}
-/*  channels  */
-.submenu .item-channels{
-    width: 790px;
-    float: left;
-    display: inline;
-    height: 24px;
-    margin-top:-20px;
-    padding: 20px 0 0 20px;
-    background: #f7f7f7;
-    overflow: hidden;
-    line-height: 0px;
-}
-.submenu .channels a{
-    display: inline-block;    
-    padding: 0 0 0 8px;
-    margin-right: 7px;
-    background: #7C7171;
-    color: #fff;
-    font: 12px/150% Arial,Verdana,"\5b8b\4f53";
-    font-family: "Microsoft YaHei",tahoma,arial,"Hiragino Sans GB","\5b8b\4f53",sans-serif;   
-}
-.submenu .item-channels .channels a i{
-    position: inherit;
-    display: inline-block;
-    margin-left: 8px;
-    width: 23px;
-    height: 24px;
-    font: 400 9px/24px consolas;
-    background: #5c5251;
-    text-align: center;
-    cursor: pointer;
-}
-.submenu .item-channels .channels a:hover{
-    background:#C81623;
-}
-.submenu .item-channels .channels a:hover i{
-    background:#B1191A;
-}
-/*  subitems  */
-.submenu .subitems{
-    width: 790px;
-    margin-bottom:5px;
-    float: left;
-    padding: 6px 0 2px 20px;
-    background: #f7f7f7;
-    min-height: 408px;
-}
-.submenu .subitems dl{
-    width: 100%;
-    overflow: hidden;
-    line-height: 2em;
-}
-.submenu .subitems dt{
-    position: relative;
-    float: left;
-    width: 54px;
-    padding: 8px 30px 0 0;
-    text-align: right;
-    font-weight: 700;
-}
-.submenu .subitems dt a{
-    color: #666;
-    font-size: 12px;
-    text-align: right;
-    font-style: normal;
-    font-variant: normal;
-    font-stretch: normal;
-    font-family: "Microsoft YaHei",tahoma,arial,"Hiragino Sans GB","\5b8b\4f53",sans-serif;
-}
-.submenu .subitems a i{
-    position: absolute;
-    top: 13px;
-    right: 18px;
-    width: 4px;
-    height: 14px;
-    font: 400 9px/14px consolas;
-    color: #666;
-}
-.submenu .subitems dd{
-    float: left;
-    padding: 6px 0;
-    width: 620px;
-    border-top: 1px solid #eee;
-}
-.submenu .fore1 dd{
-    border-top:none;
-}
-.submenu .subitems dd a{
-    float: left;
-    color: #666;
-    padding: 0 8px;
-    margin: 4px 0;
-    line-height: 16px;
-    height: 16px;
-    border-left: 1px solid #e0e0e0;
-    white-space: nowrap;
-    font-size: 12px;
-    font-family: "Microsoft YaHei",tahoma,arial,"Hiragino Sans GB","\5b8b\4f53",sans-serif;
-}
-.submenu .subitems a:hover {
-    color: #C81623;
-}
-/*  item-promotions  */
-.submenu .item-promotions{
-    float: right;
-    display: inline;
-    width: 168px;
-    margin-right: 20px;
-    line-height: 12px;
-}
-.submenu .item-promotions a{
-    width:168px;
-    height:134px; 
-}
-.submenu.submenu1{
-    top:-1px;
-}
-.submenu.submenu2{
-    top:-32px;
-}
-.submenu.submenu3{
-    top:-63px;
-}
-.submenu.submenu4{
-    top:-94px;
-}
-.submenu.submenu5{
-    top:-125px;
-}
-.submenu.submenu6{
-    top:-156px;
-}
-.submenu.submenu7{
-    top:-187px;
-}
-.submenu.submenu8{
-    top:-218px;
-}
-.submenu.submenu9{
-    top:-249px;
-}
-.submenu.submenu10{
-    top:-280px;
-}
-.submenu.submenu11{
-    top:-311px;
-}
-.submenu.submenu12{
-    top:-342px;
-}
-.submenu.submenu13{
-    top:-373px;
-}
-.submenu.submenu14{
-    top:-404px;
-}
-.submenu.submenu15{
-    top:-435px;
-}
-/*轮播*/
-.inner .slider{
-    width:730px;
-    height: 454px;
-    position:absolute;
-    bottom:2px;
-    left:222px;
-    top:56px;
-}
-.slider-main li{
-    position:absolute;
-    z-index: 0;
-    opacity:0;
-    list-style:none;
-}
-.slider-extra{
-    position:absolute;
-    top:430px;
-    left:300px;
-    z-index:3;
-}
-.slider-extra ul li{
-    display:inline-block;
-    list-style:none;
-    margin-left:-2px;
-    width:18px;
-    height:18px;
-    line-height:18px;
-    border-radius:9px;
-    background:#3e3e3e;
-    text-align:center;
-    color:white;
-    font-size:12px;
-    font-family:Arial,Verdana,宋体;
-    cursor:pointer;
-}
-.slider .lside,.slider .rside{
-    display:none;
-    width:28px;
-    height:62px;
-    line-height:62px;
-    text-align:center;
-    background-color:#000;
-    opacity:0.2;
-    position:absolute;
-    top:50%;
-    z-index:4;
-    color:white;
-    font-size:22px;
-    /*font-style:normal;*/
-    font-family:"simsun";
-    cursor:pointer;
-}
-/*右侧信息栏*/
-.w{
-    width:246px;
-    height:453px;
-    position:absolute;
-    top: 56px;
-    right:0;
-    z-index:3;
-}
-.w .news{
-    height:164px;
-    border:1px solid #e4e4e4;
-}
-.w .news .t-news{
-    height:32px;
-    line-height:32px;
-    padding:0 15px;
-    border-bottom:1px solid #e4e4e4;
-}
-.w .news .t-news h3{
-    float:left;
-    color:#666;
-    font-size:16px;
-    font-weight:400;
-    font-family:"微软雅黑"
-}
-.w .news .t-news .extra a{
-    float:right;
-    text-decoration:none;
-    color:#666;
-    font-family:consolas;
-}
-.w .news .t-news .extra a:hover{
-    color:#C81623;
-}
-.w .news .b-news{
-    height:120px;
-    padding:5px 0 0 15px;
-}
-.w .news .b-news li{
-    list-style:none;
-    height:24px;
-    line-height:24px;
-}
-.w .news .b-news a{
-    text-decoration:none;
-    color:#666;
-}
-.w .news .b-news span{
-    font-weight:700;
-    margin-right:5px;
-}
-.w .news .b-news a:hover{
-    color:#C81623;
-}
-.w .lifeserv{
-    height:208px;
-    border-right:1px solid #e4e4e4;
-}
-.w .lifeserv li{
-    list-style:none;
-    float:left;
-    width:60px;
-    height:68px;
-    line-height:108px;
-    text-align:center;
-    border-left:1px solid #e4e4e4;
-    border-bottom:1px solid #e4e4e4;
-    position:relative;
-}
-.w .lifeserv i{
-    display: block;
-    width:25px;
-    height:25px;
-    position:absolute;
-    top:13px;
-    left:18px;
-    overflow:hidden;
-    background:url("img/lifeserv.png") no-repeat;
-
-}
-.w .lifeserv .i1{
-    background-position:0 0;
-}
-.w .lifeserv .i2{
-    background-position:0 -25px;
-}
-.w .lifeserv .i3{
-    background-position:0 -50px;
-}
-.w .lifeserv .i4{
-    background-position:0 -75px;
-}
-.w .lifeserv .i5{
-    background-position:0 -100px;
-}
-.w .lifeserv .i6{
-    background-position:0 -125px;
-}
-.w .lifeserv .i7{
-    background-position:0 -150px;
-}
-.w .lifeserv .i8{
-    background-position:0 -175px;
-}
-.w .lifeserv .i9{
-    background-position:0 -250px;
-}
-.w .lifeserv .i10{
-    background-position:0 -200px;
-}
-.w .lifeserv .i11{
-    background-position:0 -272px;
-}
-.w .lifeserv .i12{
-    background-position:0 -226px;
-}
-.w .lifeserv .i-7{
-    width:12px;
-    height:15px;
-    position:absolute;
-    top:0;
-    right:0;
-    background:url("img/qiang.png") no-repeat;
-}
-.w .lifeserv li a{
-    text-decoration:none;
-    color:#666;
-}
-.w .lifeserv li:hover a{
-    color:#C81623;
-}
-.w .right-pic{
-    width:246px;
-    height:75px;
-    margin-top:5px;
-    background-image:url("img/right-pic.jpg");
-}
-
-
-
-
-
-
-.foot{
-    width:1210px;
-    margin:0 auto;
-    position:relative;
-    top:475px;
-}
-.f-top{
-    /*width:1210px;*/
-    height:183px;
-}
-
-.click{
-    width:210px;
-    height:151px;
-    background:url("img/homebg.png") -213px -136px;
-    background-color: #fff;
-    float:left;/*
-    position:absolute;
-    z-index:3;*/
-}
-
-.f-top .f-slider{
-    float:left;
-    width:1000px;
-    height:164px;
-    position:relative;
-}
-.f-slider .f-lside,.f-slider .f-rside{
-    display:none;
-    width:28px;
-    height:62px;
-    line-height:62px;
-    text-align:center;
-    background-color:#000;
-    opacity:0.2;
-    position:absolute;
-    z-index:2;
-    color:white;
-    font-size:22px;
-    /*font-style:normal;*/
-    font-family:"simsun";
-    cursor:pointer;
-}
-.slider2{
-    width:1000px;
-    height:164px;
-    overflow:hidden;
-    position:absolute;
-    left:0;
-}
-.slider2:hover~.f-lside,.slider2:hover~.f-rside{
-    display:block;
-}
-
-.f-lside:hover,.f-lside:hover~.f-rside{
-    display:block;
-}
-
-
-.f-rside:hover,.f-rside:hover .f-lside{
-    display:block;
-}
-
-
-.f-top .f-slider ul{
-    width:6000px;
-    position:absolute;
-    left:-1000px;
-    transition:left 0.2s;
-}
-.f-top .f-slider ul li{
-    list-style:none;
-    float:left;
-    width:1000px;
-}
-.f-top .f-slider ul li .img1,.f-top .f-slider ul li .img2,.f-top .f-slider ul li .img3{
-    width:249px;
-    margin-right:1px;
-}
-.f-top .f-slider ul li .pic{
-    float:left;
-    overflow:hidden;
-}
-
-
-
-
-
-
-
-.f-middle{
-    height:289px;
-}
-.f-middle .guess{
-    height:36px;
-}
-h2{
-    color:#333;
-    font-size:20px;
-    font-family:"微软雅黑";
-    font-weight:400; 
-}
-.f-middle .guess h2{
-    float:left;
-    padding-right:228px;
-    background:url("./img/homebg.png") 85px -91px;
-    line-height:30px;
-
-}
-.f-middle .guess a{
-    height:18px;
-    float:right;
-    padding-right:25px;
-    margin-top:8px;
-    background:url("./img/homebg.png") -310px -5px;
-    text-decoration:none;
-    color:#666;
-}
-.f-middle .guess a:hover{
-    color:#C81623;
-    background-position:-310px -29px;
-}
-.f-middle .goods{
-    height:232px;
-    border:1px solid #ededed;
-}
-.f-middle .goods li{
-    list-style:none;
-    float:left;
-    width:201px;
-}
-.f-middle .goods .g-pic{
-    padding:20px 30px 0;
-    margin-bottom:10px;
-}
-.f-middle .goods .g-info{
-    display: block;
-    margin-top:;
-    padding:0 36px;
-    border-right:1px solid #e6e6e6;
-}
-.g-name{
-    height:36px;
-    overflow:hidden;
-    margin-bottom:6px;
-}
-.g-name a{
-    text-decoration:none;
-    color:#666;
-}
-.g-price{
-    color:#b51d1a;
-    font-size:18px;
-}
-.f-middle .goods a:hover{
-    color:#C81623;
-}
-
-
-
-
-
-.f-foot{
-    height:463px;
-}
-.f-foot a{
-    text-decoration:none;
-}
-.f-foot h2{
-    height:36px;
-    line-height:36px;
-}
-.qualitylife a{
-    display:block;
-    border:
-}
-.q1,.q2,.q3,.brands{
-    float:left;
-    width:402px;
-    height:100%;
-    border:1px solid #ededed;
-    background:#f7f7f7;
-    overflow:hidden;
-}
-.q-item{
-    width:402px;
-    height:246px;
-    border-bottom:1px solid #ededed;
-    position:relative;
-}
-.q-item .area-tit{
-    line-height:40px;
-    text-align:center;
-    color:#333;
-    font-size:15px;
-    font-weight:700;
-    font-family:"微软雅黑";
-    border-bottom:1px dashed #e0e0e0;
-    margin:0 20px;
-}
-.q-tit{
-    position:absolute;
-    font-family:微软雅黑;
-    color:#333;
-}
-.q-item .q-tit{
-    top:109px;
-    left:45px;
-
-}
-.q-tit .tit{
-    font-size:16px;
-    font-weight:700;
-    margin-bottom:12px;
-}
-.q-tit .promotion{
-    color:#c81623;
-}
-.q-item-small{
-    float:left;
-    width:200px;
-    overflow:hidden;
-    position:relative;
-    border-right:1px solid #ededed; 
-}
-.q-item-small .q-tit{
-    top:48px;
-    left:10px;
-}
-.q2{
-    width:228px;
-    background:#fff;
-}
-.q2 a{
-    width:228px;
-}
-.q2 .q-item .q-tit{
-    top:109px;
-    left:10px;
-}
-.brands{
-    width:171px;
-    background:#fff; 
-}
-.brands ul{
-    border-right:1px dashed #ededed;
-    width:85px;
-}
-.brands ul li{
-    list-style:none;
-    width:74px;
-    height: 57px;
-    border-bottom:1px dashed #ededed;
-    position:relative;
-}
-.brands ul li a{
-    width:85px;
-    height: 57px;
-    display:block;
-    position:absolute;
-    top:0;
-    text-align:center;
-}
-.brands .left li a{
-    right:0;
-}
-.brands .left li{
-    float:right;
-}
-.brands .right li{
-   float:left;
-}
-
-
-
-
-
 </style>
 <script>
     var time1=null;
@@ -846,13 +114,11 @@ h2{
         //左右两侧的箭头显示与消失
         /*鼠标移动到图片上时图片不变，离开时又执行setInterval()*/
         $(".slider-main li,.slider .lside,.slider .rside").hover(function(){
-            $(".slider .lside").css("display","block");
-            $(".slider .rside").css("display","block");
+            $(".slider .lside,.slider .rside").css("display","block");
             clearInterval(time1);
             //console.log("进入");
         },function(){
-            $(".slider .lside").css("display","none");
-            $(".slider .rside").css("display","none");
+            $(".slider .lside,.slider .rside").css("display","none");
             time1=setInterval(function(){myInterval(1);},2000);
             //console.log("离开");          
         });
@@ -884,32 +150,55 @@ h2{
             $(this).find(".submenu").css("top",submenutop);//鼠标离开时当前submemu悬浮层时高度设置为原来的高度值
        });
 
+       // f-top层的轮播
+       // 点击左边箭头
        $(".f-lside").click(function(){
+            $(".f-slider ul").css("transition","left 1s");
             a = $(".f-slider ul").css("left");
             b = a.length - 2;
             n = Number(a.substr(0,b));
             if(n%1000==0){
-                if(n>=-1000){
+                $(".f-slider ul").css("left",(n+1000)+"px");
+                if(n>-1000){
+                    $(".f-slider ul").css("transition","left 0s");
                     $(".f-slider ul").css("left","-4000px");
-                }else{
-                    $(".f-slider ul").css("left",(n+1000)+"px");
-                }   
+                    while($(".f-slider ul").css("left")!="-4000px"){
+                    //while循环的作用：使n=0变成-4000后再执行-4000变成-3000.否则等待其变成-4000
+                    //如果没有while循环， 则n在没有变成-4000时就变成-3000，不会出现循环的效果
+                    }  
+                    $(".f-slider ul").css("transition","left 1s");
+                    $(".f-slider ul").css("left","-3000px");
+                }  
             }
        });
+
+       // 点击右边箭头
        $(".f-rside").click(function(){
+            $(".f-slider ul").css("transition","left 1s");
             a = $(".f-slider ul").css("left");
             b = a.length - 2;
             n = Number(a.substr(0,b));
             if(n%1000==0){
-                if(n<=-4000){
+                $(".f-slider ul").css("left",(n-1000)+"px");
+                if(n<-4000){
+                    $(".f-slider ul").css("transition","left 0s");
                     $(".f-slider ul").css("left","-1000px");
-                }else{
-                    $(".f-slider ul").css("left",(n-1000)+"px");
+                    while($(".f-slider ul").css("left")!="-1000px"){
+                    //while循环的作用：使n=-5000变成-1000后再执行-1000变成-2000.否则等待其变成-1000
+                    //如果没有while循环， 则n在没有变成-1000时就变成-2000，不会出现循环的效果
+                    }  
+                    $(".f-slider ul").css("transition","left 1s");
+                    $(".f-slider ul").css("left","-2000px");
                 }
             }
        });
-            
 
+       // 一道左右两边箭头上两边箭头同时显示
+       $(".slider2,.f-lside,.f-rside").hover(function(){
+            $(".f-lside,.f-rside").css("display","block");
+       },function(){
+            $(".f-lside,.f-rside").css("display","none");
+       });
     });
      
     //控制图片和下面的数字左右轮播
@@ -927,6 +216,22 @@ h2{
         /*如果数字是1，则给eq(1)（即第二张图片）和其对应的数字2添加css样式，并设置第二张图片为选中的图片，4s后重复执行此过程*/
         $(".slider-main li").eq(nb).css({"z-index":"1","opacity":"1","transition":"all 1s"}).siblings().css({"z-index":"0","opacity":"0","transition":"all 1s"});
         $(".slider-extra ul li").eq(nb).css({"background":"#b61b1f","transition":"all 1s"}).addClass("slider-on").siblings().css({"background":"#3e3e3e","transition":"all 1s"}).removeClass("slider-on");
+    }
+    function myAjax(key){
+        if(key.length>0){
+            $.ajax({
+                url:"./Search.php",
+                type:"get",
+                data:{key:key},
+                success:function(data){
+                    data = eval(data);  //eval()方法将字符串转化为对象
+                    len = data.length;
+                    for(i=1;i<len;i++){
+                        console.log(data[i].key+"      "+data[i].qre);
+                    }   
+                }
+            });
+        } 
     }
 </script>
 </head>
@@ -1211,7 +516,7 @@ h2{
         </div>
         <div class="search">
             <div class="search1">
-                <input type="text">
+                <input id="tags" type="text" oninput="myAjax(this.value)">   
                 <button><a href="#">搜索</a></button>
             </div>
             <div class="hotwords">
@@ -4966,7 +4271,7 @@ h2{
         <h2>京东 · 品质生活</h2>
         <div class="qualitylife">
             <div class="q1" style="border-right:none">
-                <a target="_blank" href="//xinpin.jd.com/" class="q-item">
+                <a target="_blank" href="http://xinpin.jd.com/" class="q-item">
                     <p class="area-tit">新发现</p>
                     <div class="q-tit">
                         <p class="tit">索尼PS VR</p>
@@ -4975,7 +4280,7 @@ h2{
                     </div>
                     <img src="./img/qualitylife/suoni.jpg">
                 </a>
-                <a target="_blank" href="//xinpin.jd.com/presale.html" class="q-item-small">
+                <a target="_blank" href="http://xinpin.jd.com/presale.html" class="q-item-small">
                     <div class="q-tit">
                         <p class="tit">新趋势</p>
                         <p class="desc">独家首发</p>
@@ -4983,7 +4288,7 @@ h2{
                     </div>
                     <img src="./img/qualitylife/decoration.jpg">
                 </a>
-                <a target="_blank" href="//miao.jd.com/" class="q-item-small"  style="border-right:none">
+                <a target="_blank" href="http://miao.jd.com/" class="q-item-small"  style="border-right:none">
                     <div class="q-tit">
                         <p class="tit">限时秒杀</p>
                         <p class="desc">浪漫夏季</p>
@@ -4993,7 +4298,7 @@ h2{
                 </a>
             </div>
             <div class="q2" style="border-right:none">
-                <a target="_blank" href="//hao.jd.com/" class="q-item">
+                <a target="_blank" href="http://hao.jd.com/" class="q-item">
                     <p class="area-tit">好东西</p>
                     <div class="q-tit">
                         <p class="tit">达人推荐</p>
@@ -5002,7 +4307,7 @@ h2{
                     </div>
                     <img src="./img/qualitylife/qumian.jpg">
                 </a>
-                <a target="_blank" href="//hao.jd.com/glist.html" class="q-item-small">
+                <a target="_blank" href="http://hao.jd.com/glist.html" class="q-item-small">
                     <div class="q-tit">
                         <p class="tit">发现好物</p>
                         <p class="desc">路由器中的外星人</p>
@@ -5012,11 +4317,11 @@ h2{
                 </a>
             </div>
             <div class="q3" style="border-right:none">
-                <a target="_blank" href="//brand.jd.com/?brandId=18374" class="q-item">
+                <a target="_blank" href="http://brand.jd.com/?brandId=18374" class="q-item">
                     <p class="area-tit">品牌街</p>
                     <img src="./img/qualitylife/mi.jpg">
                 </a>
-                <a target="_blank" href="//sale.jd.com/act/EgGCtSHqNB.html" class="q-item-small">
+                <a target="_blank" href="http://sale.jd.com/act/EgGCtSHqNB.html" class="q-item-small">
                     <div class="q-tit">
                         <p class="tit">国际服饰</p>
                         <p class="desc">职场风凉鞋</p>
@@ -5024,7 +4329,7 @@ h2{
                     </div>
                     <img src="./img/qualitylife/shoes.jpg">
                 </a>
-                <a target="_blank" href="//brand.jd.com/temai.html?brandId=132051" class="q-item-small">
+                <a target="_blank" href="http://brand.jd.com/temai.html?brandId=132051" class="q-item-small">
                 
                     <img src="./img/qualitylife/suit.jpg">
                 </a>
