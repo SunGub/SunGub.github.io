@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="js/jquery-1.11.1.min.js"></script>
+<title>Canvas贪吃蛇</title>
+<style>
+html,body{
+	width:100%;
+	margin:0;
+	padding:0;
+	background-image:url("img/bg.jpg");
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+}
+.box{
+	width:800px;
+	height: 400px;
+	margin:100px auto;
+}
+.task{
+	width:300px;
+	height: 200px;
+	float: left;
+}
+.task ul li{
+	list-style:none;
+}
+.task ul li button{
+	width: 230px;
+	height:70px;
+	font-family: "微软雅黑";
+	font-size:30px;
+	color:#fff;
+	background:#ff8839;
+	margin-top:36px;
+	border:none;
+	cursor:pointer;
+}
+#myCanvas{
+	float:right;
+	background:#897272;
+}
+.author{
+	width: 100px;
+	height: 70px;
+	background:#FF8839; 
+	border:1px solid #FF8839;
+	border-radius:0 15px 0 15px;
+	-webkit-border-radius:0 15px 0 15px;
+	-moz-border-radius:0 15px 0 15px;
+	position:fixed;
+	right:40px;
+	bottom:40px;
+}
+.author p{
+	text-align:center;
+	line-height:16px;
+	font-style:italic;
+	font-family: "微软雅黑";
+	color:#fff;
+}
+</style>
+</head>
+<body>
+    <div class="box">
+    	<div class="task">
+    		<ul>
+    			<li>
+    				<button class="button1">Start</button>
+    			</li>
+    			<li>
+    				<button class="button2">Speed:Slow</button>
+    			</li>
+    			<li>
+    				<button class="button3">Grade:0</button>
+    			</li>
+    		</ul>
+    	</div>
+    	<canvas id="myCanvas" width="400" height="400"></canvas>
+    </div>
+    <div class="author">
+    	<p>2016-08-06</p>
+    	<p>By : SSS</p>
+    </div>
+	<script>
+		var size = 10;  //蛇的大小
+        var dir = [[0,-1],[0,1],[-1,0],[1,0]]; // 上 下 左 右
+		var snake = [[130, 130], [130-1*size, 130], [130-2*size, 130], [130-3*size, 130]];  //蛇的初始位置
+
+		var walk1 = null;
+		var timewalk = 500;
+		var direction = "Right";
+		var state = "Start";  //游戏状态
+		var state_flag = 1; //控制第一次产生食物 画蛇
+		
+		var a = null;
+		var b = null;  //a 、b为食物坐标
+		var x = dir[3][0]*size;
+		var y = dir[3][1]*size;  //x、y为蛇走下一步坐标的增量
+		var grade = 0;
+
+		// 从坐标（10,10）开始画一块 颜色为#999 大小为380*380 的矩形
+		var c = document.getElementById("myCanvas");
+		var ctx = c.getContext("2d");
+		ctx.fillStyle = "#EDF6C9";
+		ctx.fillRect(10,10,380,380);  
+
+		// 产生食物
+		function food(){
+			// 从坐标（10,10）到（380,380）之间产生一个随机坐标
+			a = Math.round((Math.random()*37)+1)*size;
+			b = Math.round((Math.random()*37)+1)*size;
+			// 取出该坐标像素的rgb颜色
+			imgData = ctx.getImageData(a,b,1,1);
+			red=imgData.data[0];
+			green=imgData.data[1];
+			blue=imgData.data[2];
+			// 如果是红色说明食物产生在蛇身上，则重新产生食物，否则画出食物
+			if(red==255&&green==136&&blue==57){
+				food();
+			}else{
+				ctx.fillStyle = "#7FBA26";
+				ctx.fillRect(a,b,size,size);
+			}
+		}
+
+		// snake 运动
+		function walk(){
+			// 游戏开始 产生食物 画蛇
+			if(state_flag==1){
+				ctx.fillStyle = "#ff8839";
+				var len = snake.length;					
+				for(var i=0;i<len;i++){
+					ctx.fillRect(snake[i][0],snake[i][1],size,size);
+				}
+				food();
+				state_flag = 0;				
+			}
+			// 确定数组位置
+			snake.unshift([snake[0][0]+x,snake[0][1]+y]); //数组中的 unshift()为在数组的第一个位置插入一个元素，该元素为一个二维坐标数组
+			if(snake[0][0]<=380&&snake[0][0]>=10&&snake[0][1]>=10&&snake[0][1]<=380){
+				var len = snake.length;
+				// 如果蛇的头部坐标和食物坐标不相等 去尾   否则吃掉食物 然后再产生食物  
+				if(snake[0][0]!=a||snake[0][1]!=b){
+					ctx.fillStyle = "#EDF6C9"; //将尾部元素的颜色涂成背景颜色（去尾）
+					ctx.fillRect(snake[len-1][0],snake[len-1][1],size,size);
+					snake.pop();  // 数组中的 pop()表示删除数组中的最后一个元素				
+				}else{
+					$(".button3").text("Grade:"+(grade+=1));
+					food();
+				}
+				imgData = ctx.getImageData(snake[0][0],snake[0][1],1,1); 
+				red=imgData.data[0];
+				green=imgData.data[1];
+				blue=imgData.data[2];
+				// 判断蛇头是否撞到蛇身上
+				if(red==255&&green==136&&blue==57){
+					clearInterval(walk1);
+					state = "End";	
+					$(".button1").text("Restart");			
+				}else{
+					// 在画布上画出该数组头部的新元素（画头）
+					ctx.fillStyle = "#ff8839";
+					ctx.fillRect(snake[0][0],snake[0][1],size,size);
+				}	
+			}else{
+				// 蛇头撞到墙上停止 walk 函数 改变状态
+				clearInterval(walk1);
+				state = "End";
+				$(".button1").text("Restart");
+			}
+		}
+		
+		// 通过获取按键结果参数 来改变方向
+		function key(e){
+			// 如果按键为左右 方向为上下  或 按键为上下 方向为左右 就改变方向
+			if(((e.keyCode==37||e.keyCode==39)&&(direction=="Up"||direction=="Down"))||((e.keyCode==38||e.keyCode==40)&&(direction=="Right"||direction=="Left"))){
+				clearInterval(walk1);				
+				if(e.keyCode==37&&direction!="Right"){
+					x=dir[2][0]*size;
+					y=dir[2][1]*size;
+					direction = "Left";
+				}else if(e.keyCode==38&&direction!="Down"){
+					x=dir[0][0]*size;
+					y=dir[0][1]*size;
+					direction = "Up";
+				}else if(e.keyCode==39&&direction!="Left"){
+					x=dir[3][0]*size;
+					y=dir[3][1]*size;
+					direction = "Right";
+				}else if(e.keyCode==40&&direction!="Up"){
+					x=dir[1][0]*size;
+					y=dir[1][1]*size;
+					direction = "Down";
+				}
+				walk();
+				//当蛇改变方向的时候 如果没撞到墙和自己身上 就继续走
+				if(state!="End"){
+					walk1 = setInterval(function(){walk();},timewalk);
+				}
+			}		
+		}
+
+        $(".button1").click(function(){
+        	if($(this).text()=="Start"){
+        		walk1 = setInterval(function(){walk();},timewalk);
+        		$(this).text("Pause");
+        	}else if($(this).text()=="Restart"){
+        		// 清除之前的蛇和食物
+        		state = "Start";
+                var len = snake.length;
+                ctx.fillStyle = "#EDF6C9";
+                for(var i=1;i<len;i++){
+					ctx.fillRect(snake[i][0],snake[i][1],size,size);
+                }
+				ctx.fillRect(a,b,size,size);
+				// 重新初始化
+				direction = "Right";
+				x = dir[3][0]*size;
+				y = dir[3][1]*size;
+        		state_flag = 1;
+        		snake = [[130, 130], [130-1*size, 130], [130-2*size, 130], [130-3*size, 130]];
+        		timewalk = 500;
+        		$(".button2").text("Speed:Slow");
+        		$(".button3").text("Grade:"+(grade=0));
+        		walk1 = setInterval(function(){walk();},timewalk);
+        		$(this).text("Pause");
+        	}else{
+        		clearInterval(walk1);	
+        		$(this).text("Start");
+        	}
+        });
+
+        $(".button2").click(function(){
+        	if($(".button1").text()=="Start"){
+        		if(timewalk==500){
+	        		timewalk = 300;
+	        		$(this).text("Speed:Medium");
+	        	}else if(timewalk==300){
+	        		timewalk = 100;
+	        		$(this).text("Speed:Fast");
+	        	}else if(timewalk==100){
+	        		timewalk = 500;
+	        		$(this).text("Speed:Slow");
+	        	}
+        	}
+        });
+
+        //给window添加一个按键按下监听事件 keyup，并把事件绑定到 key 函数，key 函数就可以获得按键事件的参数 
+		window.addEventListener("keyup", key);  
+	</script>
+</body>
+</html>
