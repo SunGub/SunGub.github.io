@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="./Font-Awesome/css/font-awesome.min.css">
+<title></title>
+<style>
+body{
+	font-family:"微软雅黑";
+	background:#ddd;
+}
+a{   
+	color:#CD5C5C;    
+	text-decoration: none;
+}
+li{
+	list-style:none;
+}
+.wrap{
+	width:960px;
+	background:#fff;
+	margin:10px auto;
+	box-shadow:0 0 20px 1px #999;
+	-webkit-box-shadow:0 0 20px 1px #999;
+	-moz-box-shadow:0 0 20px 1px #999;
+}
+.head{
+	height:150px;
+	background:#8CBA3D;
+	color:#fff;
+}
+.head .name{
+	margin-left: 80px;
+	float: left;
+}
+.head .contact{
+	width:450px;
+	height: 110px;
+	margin-left:400px;
+	padding-top: 20px;
+}
+.head .contact li{
+	list-style:none;
+	height:40px;
+}
+.head .contact1{
+	float:left;
+}
+.head .contact2{
+	float:right;
+}
+.content{
+	padding-top:20px;
+	/*border:1px solid #ddd;*/
+}
+.skill{
+	overflow:hidden;
+}
+.skill span{
+	font-size:20px;
+	float:left;
+	padding-left:40px;
+}
+.submenu{
+	width:750px;
+	margin:12px 0 0 40px;
+	float:left;
+	border-left:2px dashed #8CBA3D;
+	border-top:3px solid #8CBA3D;
+	position:relative;
+}
+.submenu .si{
+	display:inline-block;
+	font-size:30px;
+	color:#8CBA3D; 
+	background-color:#fff;
+	position:absolute;
+	top:-16px;
+	left:-14px;
+	padding-right:5px;
+}
+.fi{
+	float:left;
+	margin-right:10px;
+	margin-top:3px;
+	font-size:15px;
+	color:#8CBA3D;
+}
+.sidebar{
+	position:fixed;
+	right:0;
+	top:40%;
+}
+.sidebar ul li{
+	width:100px;
+	height:40px;
+	line-height:40px;
+	margin-bottom:10px;
+	text-align:center;
+    border-radius:5px 0 0 5px;
+    -webkit-border-radius:5px 0 0 5px;
+    -moz-border-radius:5px 0 0 5px;
+	background-color:#8CBA3D;
+}
+.sidebar ul li a{
+	color:#fff;
+}
+</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="head">
+			<div class="name">
+				<h1>孙姗姗</h1>
+				<p>求职意向：前端工程师</p>
+			</div>
+			<div class="contact">
+				<div class="contact1">
+					<ul>
+						<li>
+							<i class="fa fa-phone"></i>
+							137-8629-7586
+						</li>
+						<li>
+							<i class="fa fa-envelope"></i>
+							1244214660@qq.com
+						</li>
+					</ul>
+				</div>
+				<div class="contact2">
+					<ul>
+						<li>
+							<i class="fa fa-qq"></i>
+							1244214660
+						</li>
+						<li>
+							<span class="fa fa-weixin"></span>
+							s13786297586
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="skill">
+				<span>
+			        基本信息
+			    </span>
+				<div class="submenu">
+					<i class="fa fa-sidebar-circle si"></i>
+					<ul>
+				        <li>
+				        	<i class="fa fa-user fi"></i>
+				            <p>
+				                个人信息 ：孙姗姗 | 女 | 1995年 | 2017年6月本科毕业 | 湖南科技大学 | 计算机科学与技术
+				            </p>
+				        </li>
+				        <li>
+				        	<i class="fa fa-gear fi"></i>
+				            <p>
+				                基本技能 ：HTML | CSS | JavaScript | JQuery | Ajax | Json | Bootstrap
+				            </p>
+				        </li>
+				        <li>
+				            <i class="fa fa-map-marker fi"></i>
+				            <p>
+				                在线简历 / Github : <a href="http://sungub.github.io/Resume" target="_blank" title="sungub.github.io/Resume">sungub.github.io/Resume</a> / <a href="https://github.com/SunGub/SunGub.github.io" target="_blank" title="github.com/SunGub">github.com/SunGub</a>
+				            </p>
+				        </li>
+				    </ul>
+				</div>
+			</div>
+			<div class="skill">
+				<span>
+			        技能清单
+			    </span style="">
+			    <div class="submenu">
+			    	<i class="fa fa-cogs si"></i>
+			    	<ul>
+				        <li>
+				        	<i class="fa fa-gear fi"></i>
+				            <p>
+				                HTML / CSS : 能快速使用 div+css 实现复杂页面的布局，对 HTML5 和 CSS3 有一定的了解
+				            </p>
+				        </li>
+				        <li>
+				        	<i class="fa fa-gear fi"></i>
+				            <p>
+				                JavaScript : 熟悉 JavaScript 基本语法，了解事件方法，能实现基本的业务逻辑操作
+				            </p>
+				        </li>
+				        <li>
+				        	<i class="fa fa-gear fi"></i>
+				            <p>
+				                JQuery : 能熟练使用选择器 、捕获 / 设置 html 标签元素和属性 、css方法 、Ajax等
+				            </p>
+				        </li>
+				        <li>
+				        	<i class="fa fa-gear fi"></i>
+				            <p>
+				                Ajax / Json ：能使用 JQuery 中的 Ajax 方法与后台进行数据交互，并处理后台返回的 Json 数据
+				            </p>
+				        </li>
+				        <li>
+				        	<i class="fa fa-gear fi"></i>
+				            <p>
+				                Bootstrap : 能熟练使用 Bootstrap 可视化工具设计各类 UI 界面，包括轮播、模态框等
+				            </p>
+				        </li>
+				    </ul>
+			    </div>
+			</div>
+			<div class="skill">
+				<span>
+			        项目经验
+			    </span>
+			    <div class="submenu">
+			    	<i class="fa fa-briefcase si"></i>
+			    	<ul>
+				        <li>
+				            <h4>
+				                <a href="http://sungub.github.io/jingdong" target="_black" title="京东首页">京东首页</a>
+				            </h4>
+				            <ul style="padding-left:0">
+				                <li>
+				                	<i class="fa fa-star fi"></i>
+				                    <p>
+				                        通过计算视图高度和窗口高度差来展示二级列表框的高度随滚动条高度的变化情况
+				                    </p>
+				                </li>
+				                <li>
+				                	<i class="fa fa-star fi"></i>
+				                    <p>
+				                        在轮播图片列表的首部添加一张尾部的图片，尾部添加一张首部的图片来实现循环轮播
+				                    </p>
+				                </li>
+				                <li>
+				                	<i class="fa fa-star fi"></i>
+				                    <p>
+				                        给箭头模型进行相对定位，通过调整其行高和运用css3旋转动画来实现下拉菜单箭头的切换
+				                    </p>
+				                </li>
+				                <li>
+				                	<i class="fa fa-star fi"></i>
+				                    <p>
+				                        搜索框通过 JQuery 中的 Ajax 方法与后台进行数据交互，并将返回的 Json 数据封装展示出来
+				                    </p>
+				                </li>
+				            </ul>
+				        </li>
+				        <li>
+				            <h4>
+				                <a href="http://sungub.github.io/snake" target="_black" title="Canvas贪吃蛇">Canvas贪吃蛇</a>
+				            </h4>
+				            <ul style="padding-left:0">
+				                <li>
+				                	<i class="fa fa-star fi"></i>
+				                    <p>
+				                        一款由 Canvas+JavaScript 实现的 web 网页贪吃蛇，游戏可以进行难度的选择和分数累计
+				                    </p>
+				                </li>
+				                <li>
+				                	<i class="fa fa-star fi"></i>
+				                    <p>
+				                        使用 HTML5 Canvas创建一个画布，并通过 JavaScript 绘制图形，完成游戏中图形的绘制
+				                    </p>
+				                </li>
+				                <li>
+				                	<i class="fa fa-star fi"></i>
+				                    <p>
+				                        采用二维数组确定蛇身坐标位置，再由Canvas绘制出蛇，通过“去尾画头”的方法实现蛇的运动
+				                    </p>
+				                </li>
+				                <li>
+				                	<i class="fa fa-star fi"></i>
+				                    <p>
+				                        根据蛇移动下一个位置像素点的RGB值来判断是食物还是蛇身，并对其进行相应的业务逻辑操作
+				                    </p>
+				                </li>
+				            </ul>
+				        </li>
+				        <li>
+				            <h4>
+				                <a href="http://sungub.github.io/360" target="_black" title="360安全换机">360安全换机</a>
+				            </h4>
+				            <ul style="padding-left:0">
+				                <li>
+				                	<i class="fa fa-star fi"></i>
+				                    <p>
+				                        通过视图高度与窗口高度比值来确定当前窗口位置的背景
+				                    </p>
+				                </li>
+				                <li>
+				                	<i class="fa fa-star fi"></i>
+				                    <p>
+				                        应用background-attachment属性平滑过渡，实现背景切换
+				                    </p>
+				                </li>
+				            </ul>
+				        </li>
+				        <li>
+				            <h4>
+				                <a href="http://sungub.github.io/shoufengqin" target="_black" title="手风琴">手风琴</a>
+				            </h4>
+				            <ul style="padding-left:0">
+				                <li>
+				                	<i class="fa fa-star fi"></i>
+				                    <p>
+				                        通过 JQuery 的 hover 事件和 css 方法来实现手风琴的动画效果
+				                    </p>
+				                </li>
+				                <li>
+				                	<i class="fa fa-star fi"></i>
+				                    <p>
+				                        使用CSS3中的 transition、box-shadow 属性实现动画过渡和阴影效果
+				                    </p>
+				                </li>
+				            </ul>
+				        </li>
+				    </ul>
+			    </div>
+			</div>
+			<div class="skill">
+				<span style="padding-left:20px;">
+			        奖励与任职
+			    </span>
+			    <div class="submenu">
+			    	<i class="fa fa-tags si"></i>
+			    	<ul>
+				        <li>
+				        	<i class="fa fa-trophy fi"></i>
+				            <p>
+				                国家励志奖学金 2014-2015学年
+				            </p>
+				        </li>
+				        <li>
+				        	<i class="fa fa-trophy fi"></i>
+				            <p>
+				                校自强奖 2014-2015学年
+				            </p>
+				        </li>
+				        <li>
+				        	<i class="fa fa-trophy fi"></i>
+				            <p>
+				                优秀共青团员 2014学年
+				            </p>
+				        </li>
+				        <li>
+				        	<i class="fa fa-trophy fi"></i>
+				            <p>
+				                校自强奖 2013-2014学年
+				            </p>
+				        </li>
+				        <li>
+				        	<i class="fa fa-trophy fi"></i>
+				            <p>
+				                大学英语四级证书（CET4）
+				            </p>
+				        </li>
+				    </ul>
+		    	</div>
+			</div>
+			<div class="skill">
+				<span>
+			        自我评价
+			    </span>
+			    <div class="submenu">
+			    	<i class="fa fa-pencil-square si"></i>
+			    	<ul>
+				        <li>
+				            <p>
+				                勤奋踏实，有较好的学习能力，对新的技术充满热情
+				            </p>
+				        </li>
+				    </ul>
+			    </div>
+			</div>
+		</div>
+		<!-- <img src="./img/bg2.jpg" width="960" height="1526"> -->
+	</div>
+	<div class="sidebar">
+		<ul>
+			<li>
+				<a href="http://sungub.github.io/Resume/孙姗姗 简历.pdf" target="_blank">PDF下载</a>
+			</li>
+			<li>
+				<a href="https://github.com/SunGub/SunGub.github.io/Resume" target="_blank">源代码</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
